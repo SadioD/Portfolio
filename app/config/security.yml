@@ -22,3 +22,9 @@ security:
 
             # https://symfony.com/doc/current/security/form_login_setup.html
             #form_login: ~
+            logout_on_user_change: true
+      
+      
+    access_control:
+        - { path: ^/admin,        roles: ROLE_ADMIN }                                   # Toutes les urls commencant par /admin sont protégées => il faut etre ADMIN
+        - { path: ^/auth-login/$, allow_if: "is_anonymous() and !is_authenticated()" }  # L'url de connexion ne peut être accessible que par les Users qui ne sont pas authentifiés

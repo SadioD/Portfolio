@@ -2,6 +2,8 @@
 # https://symfony.com/doc/current/service_container.html
 parameters:
     #parameter_name: value
+    # Ce paramètre permet d'injecter dans le Service Mailer l'addresse email de l'expéditeur
+    admin_email: amasadio@gmail.com
 
 services:
     # default configuration for services in *this* file
@@ -14,22 +16,26 @@ services:
         # if you need to do this, you can override this setting on individual services
         public: false
 
-    # makes classes in src/AppBundle available to be used as services
+    #### Services Declaration ############################################################################
+    # makes classes in src/CoreBundle available to be used as services
     # this creates a service per class whose id is the fully-qualified class name
-    AppBundle\:
-        resource: '../../src/AppBundle/*'
+    CoreBundle\Services\:
+        resource: '../../src/CoreBundle/Services/*'
         # you can exclude directories or files
         # but if a service is unused, it's removed anyway
-        exclude: '../../src/AppBundle/{Entity,Repository,Tests}'
+        #exclude: '../../src/CoreBundle/{Entity,Repository,Tests}'
 
+    #### Controllers ############################################################################
     # controllers are imported separately to make sure they're public
     # and have a tag that allows actions to type-hint services
-    AppBundle\Controller\:
-        resource: '../../src/AppBundle/Controller'
+    CoreBundle\Controller\:
+        resource: '../../src/CoreBundle/Controller'
         public: true
         tags: ['controller.service_arguments']
 
-    # add more services, or override services that need manual wiring
-    # AppBundle\Service\ExampleService:
-    #     arguments:
-    #         $someArgument: 'some_value'
+    
+    #### DataFixtures ##########################################################################
+    # Ce code permet d'autoriser les dossiers DataFixtures à etre utiliser comme service (load:fixtures)
+    CoreBundle\DataFixtures\:
+        resource: '../../src/CoreBundle/DataFixtures'
+        tags: ['doctrine.fixture.orm']

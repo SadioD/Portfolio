@@ -1,13 +1,47 @@
 <!DOCTYPE html>
-<html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
     <head>
         <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta name="description" content="Portfolio">
+        <meta name="keywords" content=" Portfolio, cv, business, , , ">
+        <meta name="MobileOptimized" content="320">
+        {#  Title #}
+        <title>
+            {% block title %}Welcome!{% endblock %}
+        </title>
+        {# CSS #}
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('assets/vendor/css/animate.css') }}" />
+            <link rel="stylesheet" href="{{ asset('assets/vendor/css/fonts.css') }}" />
+            <link rel="stylesheet" href="{{ asset('assets/vendor/css/bootstrap.css') }}" />
+            <link rel="stylesheet" href="{{ asset('assets/vendor/css/font-awesome.css') }}" />
+            <link rel="stylesheet" href="{{ asset('assets/vendor/css/magnific-popup.css') }}" />
+            <link rel="stylesheet" href="{{ asset('assets/vendor/css/owl.carousel.min.css') }}" />
+            <link rel="stylesheet" href="{{ asset('assets/vendor/css/owl.theme.default.min.css') }}" />
+            <link rel="stylesheet" href="{{ asset('assets/vendor/css/style.css') }}" />
+        {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        {# Main Content #}
+        {% block body %}
+        {% endblock %}
+        
+        {# Javascript #}
+        {% block javascripts %}
+            
+            <script type="text/javascript" src="{{ asset('assets/vendor/js/jquery.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('assets/vendor/js/bootstrap.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('assets/vendor/js/jquery.magnific-popup.min.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('assets/vendor/js/owl.carousel.min.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('assets/vendor/js/plugin/countto/jquery.countTo.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('assets/vendor/js/plugin/countto/jquery.appear.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('assets/vendor/js/circles.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('assets/vendor/js/custom.js') }}"></script>
+        {% endblock %}
     </body>
 </html>
