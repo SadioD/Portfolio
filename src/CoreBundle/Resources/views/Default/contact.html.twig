@@ -1,9 +1,9 @@
-<div class="prt_contact_wrapper prt_toppadder115">
-    <div class="prt_close_wrapper">
+<section class="prt_contact_wrapper prt_toppadder115">
+    <aside class="prt_close_wrapper">
         <img src="{{ asset('assets/images/right_arrow.png')}}" alt="Close" class="prt_close">
-    </div>
+    </aside>
     <div class="container">
-        <div class="row">
+        <article class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="prt_heading_wrapper">
                     <div class="prt_heading">
@@ -18,25 +18,25 @@
                         <h1>How we can help you ?</h1>
                         <div class="prt_contact_form">
                             <div class="row">
-                                <form>
+                                <form method="post" action="">
                                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                        <input type="text" name="first_name" placeholder="Your Name" class="require">
+                                        <input type="text" name="authorName" placeholder="Your Name" class="require">
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                        <input type="text" name="email" placeholder="Your Email" class="require"
+                                        <input type="text" name="authoEmail" placeholder="Your Email" class="require"
                                             data-valid="email" data-error="Email should be valid.">
                                     </div>
                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                         <input type="text" name="subject" placeholder="Subject" class="require">
                                     </div>
                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                        <textarea rows="4" name="message" placeholder="Message" class="require"></textarea>
+                                        <textarea rows="4" name="content" placeholder="Message" class="require"></textarea>
                                     </div>
                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                         <div class="response"></div>
                                     </div>
                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                        <button type="button" class="prt_btn submitForm" form-type="contact">submit</button>
+                                        <button type="submit" class="prt_btn submitForm" form-type="contact">submit</button>
                                     </div>
                                 </form>
                             </div>
@@ -70,8 +70,8 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </article>
     </div>
     {# ----- Footer ----- #}
     {% include "@Core/Default/footer.html.twig" %}
-</div>
+</section>

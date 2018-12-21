@@ -241,30 +241,13 @@ Assigned to: ThemeForest
 		});
 		return check;
 	}
-	$(".submitForm").on("click", function() {
+	$(".submitForm").on("click", function(e) {
 		var _this = $(this);
 		var targetForm = _this.closest('form');
 		var errroTarget = targetForm.find('.response');
 		var check = checkRequire(targetForm , errroTarget);
-		if(check == 0){
-			var formDetail = new FormData(targetForm[0]);
-			formDetail.append('form_type' , _this.attr('form-type'));
-			$.ajax({
-				method : 'post',
-				url : 'ajax.php',
-				data:formDetail,
-				cache:false,
-				contentType: false,
-				processData: false
-			}).done(function(resp){
-				if(resp == 1){
-					targetForm.find('input').val('');
-					targetForm.find('textarea').val('');
-					errroTarget.html('<p style="color:green;">Mail has been sent successfully.</p>');
-				}else{
-					errroTarget.html('<p style="color:red;">Something went wrong please try again latter.</p>');
-				}
-			});
+		if(check != 0){
+            e.preventDefault();
 		}
 	});
 		

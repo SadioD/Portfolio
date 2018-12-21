@@ -25,6 +25,14 @@ services:
         # but if a service is unused, it's removed anyway
         #exclude: '../../src/CoreBundle/{Entity,Repository,Tests}'
 
+    
+    #### Services Configuration ############################################################################
+    # explicitly configure service (injecting arguments defined above in parameters section)
+    CoreBundle\Services\Mailer:
+        arguments:
+            $adminEmailAdress: '%mailer_user%'
+
+
     #### Controllers ############################################################################
     # controllers are imported separately to make sure they're public
     # and have a tag that allows actions to type-hint services

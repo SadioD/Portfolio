@@ -5,12 +5,12 @@ namespace CoreBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Icon
+ * Message
  *
- * @ORM\Table(name="icon")
- * @ORM\Entity(repositoryClass="CoreBundle\Repository\IconRepository")
+ * @ORM\Table(name="message")
+ * @ORM\Entity(repositoryClass="CoreBundle\Repository\MessageRepository")
  */
-class Icon
+class Message
 {
     // ATTR + CONSTR --------------------------------------------------------------------------------------------------------------------
     /**
@@ -23,22 +23,27 @@ class Icon
 
     /**
      * @var string
-     * @ORM\Column(name="url", type="string", length=255)
+     * @ORM\Column(name="authorName", type="string", length=255)
      */
-    private $url;
+    private $authorName;
 
     /**
      * @var string
-     * @ORM\Column(name="iconLabel", type="string", length=255)
+     * @ORM\Column(name="authoEmail", type="string", length=255)
      */
-    private $iconLabel;
+    private $authoEmail;
 
     /**
-     * Icon is The Owner of This Relation
-     * @ORM\ManyToOne(targetEntity="CoreBundle\Entity\Profile", inversedBy="hobbiesIcons")
-     * @ORM\JoinColumn(nullable=false)
+     * @var string
+     * @ORM\Column(name="subject", type="string", length=255)
      */
-    private $profile;
+    private $subject;
+
+    /**
+     * @var string
+     * @ORM\Column(name="content", type="text")
+     */
+    private $content;
 
     public function __construct(array $donnees = []) {
         foreach($donnees as $key => $value) 
@@ -57,47 +62,62 @@ class Icon
     /**
      * @return string
      */
-    public function getUrl() { return $this->url; }
+    public function getAuthorName() { return $this->authorName; }
     /**
      * @return string
      */
-    public function getIconLabel() { return $this->iconLabel; }
+    public function getAuthoEmail() { return $this->authoEmail; }
     /**
-     * @return \CoreBundle\Entity\Profile
+     * @return string
      */
-    public function getProfile() { return $this->profile; }
+    public function getSubject() { return $this->subject; }
+    /**
+     * @return string
+     */
+    public function getContent() { return $this->content; }
     // ----------------------------------------------------------------------------------------------------------------------------------
     // SETTERS ---------------------------------------------------------------------------------------------------------------------------
     /**
-     * @param string $url
-     * @return Icon
+     * @param string $authorName
+     * @return Message
      */
-    public function setUrl($url)
+    public function setAuthorName($authorName)
     {
-        $this->url = $url;
+        $this->authorName = $authorName;
 
         return $this;
     }
     /**
-     * @param string $iconLabel
-     * @return Icon
+     * @param string $authoEmail
+     * @return Message
      */
-    public function setIconLabel($iconLabel)
+    public function setAuthoEmail($authoEmail)
     {
-        $this->iconLabel = $iconLabel;
+        $this->authoEmail = $authoEmail;
 
         return $this;
     }
     /**
-     * @param \CoreBundle\Entity\Profile $profile
-     * @return Icon
+     * @param string $subject
+     * @return Message
      */
-    public function setProfile(\CoreBundle\Entity\Profile $profile)
+    public function setSubject($subject)
     {
-        $this->profile = $profile;
+        $this->subject = $subject;
+
+        return $this;
+    }
+    /**
+     * @param string $content
+     * @return Message
+     */
+    public function setContent($content)
+    {
+        $this->content = $content;
 
         return $this;
     }// ----------------------------------------------------------------------------------------------------------------------------------
     // OTHERS ---------------------------------------------------------------------------------------------------------------------------
-    // ----------------------------------------------------------------------------------------------------------------------------------                
+    // ----------------------------------------------------------------------------------------------------------------------------------                      
 }
+

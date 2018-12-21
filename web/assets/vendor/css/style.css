@@ -901,13 +901,16 @@ input:focus, textarea:focus, select:focus, button:focus {
     transition: all 0.3s;
 }
 .prt_contact_details_box.details_box1{
-	background-image:url(http://placehold.it/450X250);
+    background-image:url(http://placehold.it/450X250);
+    /*background: rgb(57, 57, 57);*/
 }
 .prt_contact_details_box.details_box2{
-	background-image:url(http://placehold.it/450X250);
+    background-image:url(http://placehold.it/450X250);
+    /*background: rgb(57, 57, 57);*/
 }
 .prt_contact_details_box.details_box3{
-	background-image:url(http://placehold.it/450X250);
+    background-image:url(http://placehold.it/450X250);
+    /*background: rgb(57, 57, 57);*/
 }
 /*---------- Services css Start -------*/
 .prt_services_wrapper{
@@ -1189,7 +1192,7 @@ input:focus, textarea:focus, select:focus, button:focus {
 .prt_client_slider .owl-theme .owl-nav.disabled+.owl-dots {
     margin-top: 20px;
 }
-.prt_client_slider .owl-carousel .owl-item img{
+.prt_client_slider .owl-carousel .owl-item i{
 	width:auto !important;
     display: inline-block;
 	opacity:0.4;
@@ -1199,13 +1202,14 @@ input:focus, textarea:focus, select:focus, button:focus {
     -o-transition: all 0.3s;
     transition: all 0.3s;
 }
-.prt_client_slider .owl-carousel .owl-item img:hover{
+.prt_client_slider .owl-carousel .owl-item i:hover{
 	opacity:1;
 	-webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     -ms-transition: all 0.3s;
     -o-transition: all 0.3s;
     transition: all 0.3s;
+    color: #1b73ff;
 }
 /*---------- Portfolio css Start -------*/
 .prt_portfolio_wrapper{

@@ -5,17 +5,16 @@ namespace CoreBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Project
+ * Technology
  *
- * @ORM\Table(name="project")
- * @ORM\Entity(repositoryClass="CoreBundle\Repository\ProjectRepository")
+ * @ORM\Table(name="technology")
+ * @ORM\Entity(repositoryClass="CoreBundle\Repository\TechnologyRepository")
  */
-class Project
+class Technology
 {
     // ATTR + CONSTR --------------------------------------------------------------------------------------------------------------------
     /**
      * @var int
-     *
      * @ORM\Column(name="id", type="integer")
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
@@ -24,28 +23,15 @@ class Project
 
     /**
      * @var string
-     * @ORM\Column(name="url", type="string", length=255, unique=true)
+     * @ORM\Column(name="iconUrl", type="string", length=255, unique=true)
      */
-    private $url;
+    private $iconUrl;
 
     /**
      * @var string
-     * @ORM\Column(name="title", type="string", length=255, unique=true)
+     * @ORM\Column(name="iconLabels", type="string", length=255, unique=true)
      */
-    private $title;
-
-    /**
-     * @var string
-     * @ORM\Column(name="shortDesc", type="text")
-     */
-    private $shortDesc;
- 
-    /**
-     * Project is The Owner of This Relation
-     * @ORM\OneToOne(targetEntity="CoreBundle\Entity\Image", cascade={"persist", "remove"})
-     * @ORM\JoinColumn(nullable=true)
-     */
-    private $image;
+    private $iconLabels;
 
     public function __construct(array $donnees = []) {
         foreach($donnees as $key => $value) 
@@ -64,48 +50,34 @@ class Project
     /**
      * @return string
      */
-    public function getUrl() { return $this->url; }
+    public function getIconUrl() { return $this->iconUrl; }
     /**
      * @return string
      */
-    public function getTitle() { return $this->title; }
-    /**
-     * @return string
-     */
-    public function getShortDesc() { return $this->shortDesc; }
+    public function getIconLabels() { return $this->iconLabels; }
     // ----------------------------------------------------------------------------------------------------------------------------------
     // SETTERS ---------------------------------------------------------------------------------------------------------------------------
     /**
-     * @param string $url
-     * @return Project
+     * @param string $iconUrl
+     * @return Technology
      */
-    public function setUrl($url)
+    public function setIconUrl($iconUrl)
     {
-        $this->url = $url;
+        $this->iconUrl = $iconUrl;
 
         return $this;
     }
     /**
-     * @param string $title
-     * @return Project
+     * @param string $iconLabels
+     * @return Technology
      */
-    public function setTitle($title)
+    public function setIconLabels($iconLabels)
     {
-        $this->title = $title;
-
-        return $this;
-    }
-    /**
-     * @param string $shortDesc
-     * @return Project
-     */
-    public function setShortDesc($shortDesc)
-    {
-        $this->shortDesc = $shortDesc;
+        $this->iconLabels = $iconLabels;
 
         return $this;
     }// ----------------------------------------------------------------------------------------------------------------------------------
     // OTHERS ---------------------------------------------------------------------------------------------------------------------------
-    // ----------------------------------------------------------------------------------------------------------------------------------                  
+    // ----------------------------------------------------------------------------------------------------------------------------------                     
 }
 

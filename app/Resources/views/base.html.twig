@@ -5,15 +5,18 @@
 <html lang="en">
 <!--<![endif]-->
     <head>
-        <meta charset="UTF-8" />
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta name="description" content="Portfolio">
-        <meta name="keywords" content=" Portfolio, cv, business, , , ">
-        <meta name="MobileOptimized" content="320">
-        {#  Title #}
+        {# Title #}
         <title>
             {% block title %}Welcome!{% endblock %}
         </title>
+
+        {# Meta data #}
+        <meta charset="UTF-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta name="description" content="Get to know me, checkout the projects I'm working on and more...">
+        <meta name="keywords" content=" portfolio, cv, web developer, webmaster, web marketing, développeur, freelance, codeur">
+        <meta name="MobileOptimized" content="320">
+        
         {# CSS #}
         {% block stylesheets %}
             <link rel="stylesheet" href="{{ asset('assets/vendor/css/animate.css') }}" />

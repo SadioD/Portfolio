@@ -2,7 +2,7 @@
     {% block body %}
         <div class="prt_main_wrapper">
             {# La classe prt_home_wrapper ci-dessous contient le background image blanc dans le fichier style.css #}
-            <div class="prt_home_wrapper">
+            <header class="prt_home_wrapper">
                 {#---------------------------- Spining Logo --------------------------------------------#}
                 <div class="prt_logo_wrapper">
                     <a><img src="{{ asset('assets/images/logo.png')}}" alt="Logo" id="prt_close_tab"></a>
@@ -10,10 +10,12 @@
                 
                 {#---------------------------- Menu ---------------------------------------------------#}
                 <div class="prt_menu_wrapper">
-                    <a href="#about" class="prt_top">about</a>
-                    <a href="#contact" class="prt_right">contact</a>
-                    <a href="#services" class="prt_bottom">strength</a>
-                    <a href="#portfolio" class="prt_left">portfolio</a>
+                    <nav>
+                        <a href="#about" class="prt_top">about</a>
+                        <a href="#contact" class="prt_right">contact</a>
+                        <a href="#services" class="prt_bottom">strength</a>
+                        <a href="#portfolio" class="prt_left">portfolio</a>
+                    </nav>
                 </div>
                 <div class="container">
                     <div class="row">
@@ -22,7 +24,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </header>
             {#-------------------------------- About Wrapper Start ----------------------------------------#}
             {% include "@Core/Default/about.html.twig" %}
             {#-------------------------------- Contact Wrapper Start --------------------------------------#}
