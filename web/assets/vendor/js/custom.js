@@ -162,7 +162,7 @@ Assigned to: ThemeForest
 	var targetSection;
 	var tar;
 	var timing = 500;
-	$('div.prt_menu_wrapper a').on('click' , function(e){
+        $('div.prt_menu_wrapper a').on('click' , function(e){
 		e.preventDefault();
 		tar = $(this).attr('href').split('#')[1];
 		targetSection = $('.prt_'+tar+'_wrapper');
@@ -197,7 +197,7 @@ Assigned to: ThemeForest
 		}
 		setTimeout(function(){ targetSection.css('display', 'none'); }, timing);
 		targetSection.animate(AplCss, timing);
-	};
+    };
 	
 	// Contact Form Submission
 	function checkRequire(formId , targetResp){

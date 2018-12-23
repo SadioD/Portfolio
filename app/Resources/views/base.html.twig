@@ -7,14 +7,14 @@
     <head>
         {# Title #}
         <title>
-            {% block title %}Welcome!{% endblock %}
+            {% block title %}Sadio DIALLO - Consultant en Développement Web, Design, Référencement SEO, WebMarketing{% endblock %}
         </title>
 
         {# Meta data #}
         <meta charset="UTF-8" />
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta name="description" content="Get to know me, checkout the projects I'm working on and more...">
-        <meta name="keywords" content=" portfolio, cv, web developer, webmaster, web marketing, développeur, freelance, codeur">
+        <meta name="keywords" content="Design, portfolio, cv, web developer, webmaster, web marketing, développeur, freelance, codeur, template, referencement SEO, lettre de motivation, emploi, recrutement, job, cadre, web, consultant, Marketing">
         <meta name="MobileOptimized" content="320">
         
         {# CSS #}
@@ -30,6 +30,18 @@
         {% endblock %}
     </head>
     <body>
+        <!-- Alerte Désactivation Javascript -->
+        <noscript>
+            <div class="row">
+                <div class="col-xs-12 text-center">
+                    <span style="color:red;">
+                        Oups... Il semblerait que Javascript ne soit pas activé sur votre navigateur.
+                        Certaines fonnalités de ce site ne seront pas accessibles.
+                    </span>
+                </div>
+            </div>
+        </noscript>
+
         {# Main Content #}
         {% block body %}
         {% endblock %}
@@ -45,6 +57,7 @@
             <script type="text/javascript" src="{{ asset('assets/vendor/js/plugin/countto/jquery.appear.js') }}"></script>
             <script type="text/javascript" src="{{ asset('assets/vendor/js/circles.js') }}"></script>
             <script type="text/javascript" src="{{ asset('assets/vendor/js/custom.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('assets/js/main.js') }}"></script>
         {% endblock %}
     </body>
 </html>

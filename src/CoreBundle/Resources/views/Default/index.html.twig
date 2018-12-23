@@ -10,9 +10,18 @@
                 
                 {#---------------------------- Menu ---------------------------------------------------#}
                 <div class="prt_menu_wrapper">
+                
+                    {# Flash Message - Form Error #}
+                    {% for message in app.flashes('notice') %}
+                        {% if not message is empty %}
+                            <div style="position: absolute; top:2%; left: 5%;">
+                                <p style="color:red;">{{ message }}</p>
+                            </div> 
+                        {% endif %}
+                    {% endfor %}
                     <nav>
                         <a href="#about" class="prt_top">about</a>
-                        <a href="#contact" class="prt_right">contact</a>
+                        <a href="#contact" class="prt_right" id="contactLink">contact</a>
                         <a href="#services" class="prt_bottom">strength</a>
                         <a href="#portfolio" class="prt_left">portfolio</a>
                     </nav>

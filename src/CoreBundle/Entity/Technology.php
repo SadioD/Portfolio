@@ -1,9 +1,10 @@
 <?php
-
+// Cette Entité représente les technos que je maîtrise
+// Elle sera utilisée pour la page Strength au niveau des icones (sliders). 
 namespace CoreBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-
+use CoreBundle\Services\Hydrator;
 /**
  * Technology
  *
@@ -13,6 +14,11 @@ use Doctrine\ORM\Mapping as ORM;
 class Technology
 {
     // ATTR + CONSTR --------------------------------------------------------------------------------------------------------------------
+    /**
+     * Trait Hydrator
+     */
+    use Hydrator;
+
     /**
      * @var int
      * @ORM\Column(name="id", type="integer")
@@ -33,13 +39,10 @@ class Technology
      */
     private $iconLabels;
 
-    public function __construct(array $donnees = []) {
-        foreach($donnees as $key => $value) 
-        {
-			$method = 'set' . ucfirst($key);
-			if (is_callable([$this, $method])) {
-				$this->$method($value);
-			}
+    public function __construct(array $donnees = []) 
+    {
+        if (!empty($donnees)) {
+            $this->hydrateEntity($donnees);
         }
     }// ---------------------------------------------------------------------------------------------------------------------------------- 
     // GETTERS ---------------------------------------------------------------------------------------------------------------------------

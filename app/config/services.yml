@@ -32,6 +32,11 @@ services:
         arguments:
             $adminEmailAdress: '%mailer_user%'
 
+    # explicitly configure service (The following service will be called back after each PostPersist Event)
+    CoreBundle\Services\EventListeners\DoctrineListeners\EntityCreationListener:
+        tags:
+          - { name: doctrine.event_listener, event: postPersist }
+
 
     #### Controllers ############################################################################
     # controllers are imported separately to make sure they're public

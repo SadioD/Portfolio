@@ -3,8 +3,8 @@
 namespace CoreBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-
-/**
+use CoreBundle\Services\Hydrator;
+/** 
  * Education
  *
  * @ORM\Table(name="education")
@@ -13,6 +13,11 @@ use Doctrine\ORM\Mapping as ORM;
 class Education
 {
     // ATTR + CONSTR --------------------------------------------------------------------------------------------------------------------
+    /**
+     * Trait Hydrator
+     */
+    use Hydrator;
+    
     /**
      * @var int
      * @ORM\Column(name="id", type="integer")
@@ -45,13 +50,10 @@ class Education
      */
     private $shortDesc;
     
-    public function __construct(array $donnees = []) {
-        foreach($donnees as $key => $value) 
-        {
-			$method = 'set' . ucfirst($key);
-			if (is_callable([$this, $method])) {
-				$this->$method($value);
-			}
+    public function __construct(array $donnees = []) 
+    {
+        if (!empty($donnees)) {
+            $this->hydrateEntity($donnees);
         }
     }// ---------------------------------------------------------------------------------------------------------------------------------- 
     // GETTERS ---------------------------------------------------------------------------------------------------------------------------
