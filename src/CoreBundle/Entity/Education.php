@@ -28,25 +28,25 @@ class Education
 
     /**
      * @var string
-     * @ORM\Column(name="graduationDate", type="string", length=255)
+     * @ORM\Column(name="graduationYear", type="string", length=4)
      */
-    private $graduationDate;
+    private $graduationYear;
 
     /**
      * @var string
-     * @ORM\Column(name="country", type="string", length=255, nullable=true)
+     * @ORM\Column(name="country", type="string", length=10, nullable=true)
      */
     private $country;
 
     /**
      * @var string
-     * @ORM\Column(name="degree", type="string", length=255)
+     * @ORM\Column(name="degree", type="string", length=26)
      */
     private $degree;
 
     /**
      * @var string
-     * @ORM\Column(name="shortDesc", type="text", nullable=true)
+     * @ORM\Column(name="shortDesc", type="string", length=125, nullable=true)
      */
     private $shortDesc;
     
@@ -64,7 +64,7 @@ class Education
     /**
      * @return string
      */
-    public function getGraduationDate() { return $this->graduationDate; }
+    public function getGraduationYear() { return $this->graduationYear; }
     /**
      * @return string
      */
@@ -80,12 +80,12 @@ class Education
     // ----------------------------------------------------------------------------------------------------------------------------------
     // SETTERS ---------------------------------------------------------------------------------------------------------------------------
     /**
-     * @param string $graduationDate
+     * @param string $graduationYear
      * @return Education
      */
-    public function setGraduationDate($graduationDate)
+    public function setGraduationYear($graduationYear)
     {
-        $this->graduationDate = $graduationDate;
+        $this->graduationYear = $graduationYear;
 
         return $this;
     }

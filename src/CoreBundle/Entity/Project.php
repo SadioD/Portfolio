@@ -45,6 +45,13 @@ class Project
      * @ORM\Column(name="shortDesc", type="text")
      */
     private $shortDesc;
+
+    /**
+     * Si True => le projet est Responsive. Si False => Pas compatible
+     * @var boolean
+     * @ORM\Column(name="seoFollow", type="boolean")
+     */
+    private $responsive;
  
     /**
      * Project is The Owner of This Relation
@@ -76,6 +83,10 @@ class Project
      * @return string
      */
     public function getShortDesc() { return $this->shortDesc; }
+    /**
+     * @return boolean
+     */
+    public function isResponsive() { return $this->responsive; }
      /**
      * @return \CoreBundle\Entity\Image
      */

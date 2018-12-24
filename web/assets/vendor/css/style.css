@@ -152,8 +152,8 @@ input:focus, textarea:focus, select:focus, button:focus {
     -moz-transform: translate(-50%,-50%);
     -o-transform: translate(-50%,-50%);
 }
-#status img {
-}
+/*#status img {
+}*/
 /*---------- Heading Css Start -------*/
 .prt_heading_wrapper{
 	text-align:center;
@@ -762,9 +762,9 @@ input:focus, textarea:focus, select:focus, button:focus {
     z-index: 1;
     display: none;
 }
-.prt_contact_box{
+/*.prt_contact_box{
 	
-}
+}*/
 .prt_contact_info{
 	display:inline-block;
 	margin-bottom:50px;
@@ -1192,7 +1192,7 @@ input:focus, textarea:focus, select:focus, button:focus {
 .prt_client_slider .owl-theme .owl-nav.disabled+.owl-dots {
     margin-top: 20px;
 }
-.prt_client_slider .owl-carousel .owl-item i{
+.prt_client_slider .owl-carousel .owl-item img{
 	width:auto !important;
     display: inline-block;
 	opacity:0.4;
@@ -1202,14 +1202,14 @@ input:focus, textarea:focus, select:focus, button:focus {
     -o-transition: all 0.3s;
     transition: all 0.3s;
 }
-.prt_client_slider .owl-carousel .owl-item i:hover{
+.prt_client_slider .owl-carousel .owl-item img:hover{
 	opacity:1;
 	-webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     -ms-transition: all 0.3s;
     -o-transition: all 0.3s;
     transition: all 0.3s;
-    color: #1b73ff;
+
 }
 /*---------- Portfolio css Start -------*/
 .prt_portfolio_wrapper{

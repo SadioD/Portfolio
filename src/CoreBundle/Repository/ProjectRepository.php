@@ -18,7 +18,7 @@ class ProjectRepository extends \Doctrine\ORM\EntityRepository
 
         $qb->innerJoin('p.image', 'i')
            ->addSelect('i')
-           ->orderBy('p.id', 'DESC');
+           ->orderBy('p.id', 'ASC');
         
         // On recupère les résultats au format Array pour optimiser le temps de traitement. 
         // On peut se le permettre vu que nous n'aurons pas besoin de faire $project->setAttr() une fois les projects recupérés de la BDD

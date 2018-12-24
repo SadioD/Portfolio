@@ -28,38 +28,38 @@ class Experience
 
     /**
      * @var string
-     * @ORM\Column(name="startingYear", type="string", length=255)
+     * @ORM\Column(name="startingYear", type="string", length=4)
      */
     private $startingYear;
 
     /**
      * @var string
-     * @ORM\Column(name="startingMonth", type="string", length=255)
+     * @ORM\Column(name="startingMonth", type="string", length=5)
      */
     private $startingMonth;
 
     /**
      * @var string
-     * @ORM\Column(name="endingDate", type="string", length=255)
+     * @ORM\Column(name="endingDate", type="string", length=10)
      */
     private $endingDate;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="position", type="string", length=255)
+     * @ORM\Column(name="position", type="string", length=21)
      */
     private $position;
 
     /**
      * @var string
-     * @ORM\Column(name="company", type="string", length=255)
+     * @ORM\Column(name="company", type="string", length=16)
      */
     private $company;
 
     /**
      * @var string
-     * @ORM\Column(name="shortDesc", type="text", nullable=true)
+     * @ORM\Column(name="shortDesc", type="string", length=116, nullable=true)
      */
     private $shortDesc;
 
