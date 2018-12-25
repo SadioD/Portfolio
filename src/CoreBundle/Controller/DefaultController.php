@@ -7,6 +7,7 @@ use Symfony\Component\HttpFoundation\Request;
 use CoreBundle\Entity\Education;
 use CoreBundle\Entity\Experience;
 use CoreBundle\Entity\Project;
+use CoreBundle\Entity\Skills;
 use CoreBundle\Entity\Technology;
 use CoreBundle\Entity\Message;
 use CoreBundle\Form\MessageType;
@@ -31,8 +32,9 @@ class DefaultController extends Controller
         // On affiche la vue après avoir recupéré les entités 
         return $this->render('@Core/Default/index.html.twig', ['experienceList' => $this->getDoctrine()->getRepository(Experience::class)->findAllArray(),
                                                                'educationList'  => $this->getDoctrine()->getRepository(Education::class)->findAllArray(),
-                                                               'Technologies'   => $this->getDoctrine()->getRepository(Technology::class)->findAllArray(),
+                                                               'technologies'   => $this->getDoctrine()->getRepository(Technology::class)->findAllArray(),
                                                                'projectList'    => $this->getDoctrine()->getRepository(Project::class)->findAllWithImages(),
+                                                               'skillsList'     => $this->getDoctrine()->getRepository(Skills::class)->findAllWithImages(),
                                                                'form'           => $form->createView()]);
     }// -----------------------------------------------------------------------------------------------------------------------------
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

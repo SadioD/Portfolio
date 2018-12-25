@@ -54,36 +54,28 @@ class LoadProject extends Fixture
                 'titleInfo'  => 'Frameworks/Libraries : CodeIgniter 3, jQuery and UI'
             ],
             [
-                'url'        => 'url/test_e.com',
-                'name'       => 'Test IDI 1',
-                'responsive' =>  true,
-                'shortDesc'  => 'Responsive IDI-1',
+                'url'        => 'http://etudiant.univgandhiguinee.com',
+                'name'       => 'Symfony',
+                'responsive' =>  false,
+                'shortDesc'  => 'A School Management Platform',
                 'loopStatus' => 'end',
-                'titleInfo'  => 'IDI\'s Project Info'
+                'titleInfo'  => 'Frameworks/Libraries : Symfony and Bootstrap'
             ],
             [
-                'url'        => 'url/test_f.com',
-                'name'       => 'Test IDI 2',
-                'responsive' =>  true,
-                'shortDesc'  => 'Responsive IDI-2',
+                'url'        => 'http://afdalgroup.com',
+                'name'       => 'WordPress',
+                'responsive' =>  false,
+                'shortDesc'  => 'Farming and AgriFood Website',
                 'loopStatus' => 'start',
-                'titleInfo'  => 'IDI\'s Project Info'
+                'titleInfo'  => 'CMS : WordPress'
             ],
             [
-                'url'        => 'url/test_g.com',
-                'name'       => 'Test IDI 3',
-                'responsive' =>  true,
-                'shortDesc'  => 'Responsive IDI-3',
+                'url'        => 'http://societecivileguineenne.org',
+                'name'       => 'WordPress',
+                'responsive' =>  false,
+                'shortDesc'  => 'Guinea Civil Society Platform',
                 'loopStatus' => 'end',
-                'titleInfo'  => 'IDI\'s Project Info'
-            ],
-            [
-                'url'        => 'url/test_h.com',
-                'name'       => 'Test IDI 4',
-                'responsive' =>  true,
-                'shortDesc'  => 'Responsive IDI-4',
-                'loopStatus' => 'start',
-                'titleInfo'  => 'IDI\'s Project Info'
+                'titleInfo'  => 'CMS : WordPress'
             ]
         ];
 
@@ -119,10 +111,6 @@ class LoadProject extends Fixture
             [
                 'alt' => 'test IDI-3',
                 'url' => 'http://placehold.it/370X370'
-            ],
-            [
-                'alt' => 'test IDI-4',
-                'url' => 'http://placehold.it/370X460'
             ]
         ];
 

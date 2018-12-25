@@ -1,10 +1,25 @@
 /* Page Strenght - Technology - Slider */
-.firstColor:hover {
+.htmlColor:hover {
+    color: rgb(221, 75, 37);
+}
+.cssColor:hover {
     color: #1b73ff;
 }
-.secondColor:hover {
-    color: #c82663;
+.jsColor:hover {
+    color: rgb(239, 216, 29);
 }
-.thirdColor:hover {
-    color: #76c239;
+.phpColor:hover {
+    color: rgb(115, 119, 173);
+}
+.angularColor:hover {
+    color: rgb(189, 14, 45);
+}
+.githubColor:hover {
+    color: rgb(255, 255, 255);
+}
+.bitbucketColor:hover {
+    color: rgb(31, 77, 125);
+}
+.dbColor:hover {
+    color: #c82663;
 }

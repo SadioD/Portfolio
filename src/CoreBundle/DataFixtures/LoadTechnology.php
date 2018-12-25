@@ -13,13 +13,13 @@ class LoadTechnology extends Fixture
         // Lets create a list of Technology
         $list = [
             [
-                'iconUrl'       => 'fa fa-github',
+                'iconUrl'       => 'fa fa-github fa-4x githubColor',
                 'iconLabel'     => 'Github',
                 'seoFollow'     => true,
                 'redirectUrl'   => 'https://github.com/'
             ],
             [
-                'iconUrl'       => 'fa fa-html5',
+                'iconUrl'       => 'fa fa-html5 fa-4x htmlColor',
                 'iconLabel'     => 'HTML5',
                 'seoFollow'     => true,
                 'redirectUrl'   => 'https://fr.wikipedia.org/wiki/HTML5'
@@ -31,25 +31,25 @@ class LoadTechnology extends Fixture
                 'redirectUrl'   => ''
             ],*/
             [
-                'iconUrl'       => 'fa fa-css3',
+                'iconUrl'       => 'fa fa-css3 fa-4x cssColor',
                 'iconLabel'     => 'CSS',
                 'seoFollow'     => true,
                 'redirectUrl'   => 'https://openclassrooms.com/fr/courses/1603881-apprenez-a-creer-votre-site-web-avec-html5-et-css3'
             ],
             [
-                'iconUrl'       => 'fa fa-bitbucket',
+                'iconUrl'       => 'fa fa-bitbucket fa-4x bitbucketColor',
                 'iconLabel'     => 'Bitbucket',
                 'seoFollow'     => true,
                 'redirectUrl'   => 'https://bitbucket.org/'
             ],
             [
-                'iconUrl'       => 'fa fa-database',
+                'iconUrl'       => 'fa fa-database fa-4x dbColor',
                 'iconLabel'     => 'MySQL/Postgres',
                 'seoFollow'     => true,
                 'redirectUrl'   => 'https://www.mysql.com/fr/'
             ],
             [
-                'iconUrl'       => 'fab fa-js-square',
+                'iconUrl'       => 'fab fa-js-square fa-4x jsColor',
                 'iconLabel'     => 'Javascript',
                 'seoFollow'     => true,
                 'redirectUrl'   => 'https://developer.mozilla.org/fr/docs/Web/JavaScript'
@@ -58,25 +58,25 @@ class LoadTechnology extends Fixture
                 'iconUrl'       => 'http://placehold.it/170X110',
                 'iconLabel'     => 'Codeigniter Web Image',
                 'seoFollow'     => false,
-                'redirectUrl'   => ''
+                'redirectUrl'   => '#'
             ],
             [
-                'iconUrl'       => 'fab fa-php',
+                'iconUrl'       => 'fab fa-php fa-4x phpColor',
                 'iconLabel'     => 'PHP',
                 'seoFollow'     => true,
                 'redirectUrl'   => 'http://www.php.net/'
             ],
             [
-                'iconUrl'       => 'fab fa-angular',
+                'iconUrl'       => 'fab fa-angular fa-4x angularColor',
                 'iconLabel'     => 'Angular',
                 'seoFollow'     => true,
                 'redirectUrl'   => 'https://angular.io/'
             ],
             [
-                'iconUrl'       => 'two_http://placehold.it/170X110',
+                'iconUrl'       => 'http://placehold.it/170X110',
                 'iconLabel'     => 'Assetic Web Image',
                 'seoFollow'     => false,
-                'redirectUrl'   => ''
+                'redirectUrl'   => '#'
             ]
         ];
         
