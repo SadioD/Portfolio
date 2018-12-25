@@ -3,6 +3,7 @@
 namespace CoreBundle\Services;
 
 use Doctrine\Common\Persistence\Event\LifecycleEventArgs;
+use CoreBundle\Entity\Message;
 
 class Purge
 {

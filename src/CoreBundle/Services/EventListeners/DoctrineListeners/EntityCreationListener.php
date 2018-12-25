@@ -23,7 +23,7 @@ class EntityCreationListener
     private $purgator;
 
     public function __construct(Mailer $mailerObject, Purge $purgatorObject) {
-        $this->mailer    = $mailerObject;
+        $this->mailer   = $mailerObject;
         $this->purgator = $purgatorObject;
     }// ------------------------------------------------------------------------------------------------------------------------
     // METHODS -------------------------------------------------------------------------------------------------
@@ -33,17 +33,17 @@ class EntityCreationListener
 
         // Si c'est un entité de Message qui a été persisté =>
         // On envoie l'email de confirmation de réception du message et on purge la liste des vieux messages
-        if ($entity instanceof Message) 
-        {
-            
-            $email          = $entity->getAuthorEmail();
-            $messageTitle   = 'Sadio DIALLO - Confirmation de réception';
-            $messageContent = 'Bonjour ' . $entity->getAuthorName() . ', <br/>';
-            $messageContent .= 'Je vous confirme avoir bien reçu votre message. <br/>';
-            $messageContent .= 'Je vous ferai un retour dès que possible. <br/> Cordialement. <br/><br/> Sadio DIALLO.';
-            
-            $this->mailer->sendNotification($email, $messageTitle, $messageContent);
-            $this->purgator->purgeMessageList($arg);
+        if (!$entity instanceof Message) 
+        { 
+            return; 
         }
+        $email          = $entity->getAuthorEmail();
+        $messageTitle   = 'Sadio DIALLO - Confirmation de réception';
+        $messageContent = 'Bonjour ' . $entity->getAuthorName() . ', <br/>';
+        $messageContent .= 'Je vous confirme avoir bien reçu votre message. <br/>';
+        $messageContent .= 'Je vous ferai un retour dès que possible. <br/> Cordialement. <br/><br/> Sadio DIALLO.';
+            
+        $this->mailer->sendNotification($email, $messageTitle, $messageContent);
+        $this->purgator->purgeMessageList($arg);
     }// ------------------------------------------------------------------------------------------------------------------------
 }

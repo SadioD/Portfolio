@@ -30,28 +30,42 @@ class Project
 
     /**
      * @var string
-     * @ORM\Column(name="url", type="string", length=255, unique=true)
+     * @ORM\Column(name="url", type="string", length=180, unique=true)
      */
     private $url;
 
     /**
      * @var string
-     * @ORM\Column(name="title", type="string", length=255, unique=true)
+     * @ORM\Column(name="name", type="string", length=180, unique=true)
      */
-    private $title;
+    private $name;
 
     /**
      * @var string
-     * @ORM\Column(name="shortDesc", type="text")
+     * @ORM\Column(name="shortDesc", type="string", length=180)
      */
     private $shortDesc;
 
     /**
      * Si True => le projet est Responsive. Si False => Pas compatible
      * @var boolean
-     * @ORM\Column(name="seoFollow", type="boolean")
+     * @ORM\Column(name="responsive", type="boolean")
      */
     private $responsive;
+    
+    /**
+     * contient la position du projet dans la boucle (utile pour afficher la boucle for)
+     * @var string
+     * @ORM\Column(name="loopStatus", type="string", length=180)
+     */
+    private $loopStatus;
+
+    /**
+     * contient l'attribut title (<a/> tag) de chaque projet
+     * @var string
+     * @ORM\Column(name="titleInfo", type="string", length=180, nullable=true)
+     */
+    private $titleInfo;
  
     /**
      * Project is The Owner of This Relation
@@ -78,7 +92,7 @@ class Project
     /**
      * @return string
      */
-    public function getTitle() { return $this->title; }
+    public function getName() { return $this->name; }
     /**
      * @return string
      */
@@ -87,6 +101,14 @@ class Project
      * @return boolean
      */
     public function isResponsive() { return $this->responsive; }
+    /**
+     * @return string
+     */
+    public function getLoopStatus() { return $this->loopStatus; }
+    /**
+     * @return string
+     */
+    public function getTitleInfo() { return $this->titleInfo; }
      /**
      * @return \CoreBundle\Entity\Image
      */
@@ -104,12 +126,12 @@ class Project
         return $this;
     }
     /**
-     * @param string $title
+     * @param string $name
      * @return Project
      */
-    public function setTitle($title)
+    public function setName($name)
     {
-        $this->title = $title;
+        $this->name = $name;
 
         return $this;
     }
@@ -124,6 +146,16 @@ class Project
         return $this;
     }
     /**
+     * @param boolean $responsive
+     * @return Project
+     */
+    public function setResponsive($responsive)
+    {
+        $this->responsive = $responsive;
+
+        return $this;
+    }
+    /**
      * @param \CoreBundle\Entity\Image $image
      * @return Project
      */
@@ -134,5 +166,24 @@ class Project
         return $this;
     }// ----------------------------------------------------------------------------------------------------------------------------------
     // OTHERS ---------------------------------------------------------------------------------------------------------------------------
-    // ----------------------------------------------------------------------------------------------------------------------------------                  
+    /**
+     * @param string $loopStatus
+     * @return Project
+     */
+    public function setLoopStatus($loopStatus)
+    {
+        $this->loopStatus = $loopStatus;
+
+        return $this;
+    }
+    /**
+     * @param string $titleInfo
+     * @return Project
+     */
+    public function setTitleInfo($titleInfo)
+    {
+        $this->titleInfo = $titleInfo;
+
+        return $this;
+    }// ----------------------------------------------------------------------------------------------------------------------------------                  
 }

@@ -40,58 +40,20 @@
                     </div>
                     <div class="prt_about_learnsection">
                         <div class="row">
-                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col-lg-offset-6 col-md-offset-6 col-sm-offset-0 col-xs-offset-0">
-                                <div class="prt_about_learnbox_right">
+                            {% for education in educationList if educationList is not empty %}
+                            <div class="{{ education.firstHtmlClass }}">
+                                <div class="{{ education.secondHtmlClass }}">
                                     <div class="prt_about_learnbox_year">
-                                        <h1>2004</h1>
+                                        <h1>{{ education.graduationYear }}</h1>
                                     </div>
                                     <div class="prt_about_learnbox_info">
-                                        <h4>Diploma In UI/UX Design</h4>
-                                        <span>New York</span>
-                                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                                            accusantium doloremque laudantium, totam rem aperiam.</p>
+                                        <h4>{{ education.degree }}</h4>
+                                        <span>{{ education.country }}</span>
+                                        <p>{{ education.shortDesc }}</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                <div class="prt_about_learnbox_left">
-                                    <div class="prt_about_learnbox_year">
-                                        <h1>2006</h1>
-                                    </div>
-                                    <div class="prt_about_learnbox_info">
-                                        <h4>Diploma In Web Design</h4>
-                                        <span>New York</span>
-                                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                                            accusantium doloremque laudantium, totam rem aperiam.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col-lg-offset-6 col-md-offset-6 col-sm-offset-0 col-xs-offset-0">
-                                <div class="prt_about_learnbox_right">
-                                    <div class="prt_about_learnbox_year">
-                                        <h1>2008</h1>
-                                    </div>
-                                    <div class="prt_about_learnbox_info">
-                                        <h4>Diploma In UI/UX Design</h4>
-                                        <span>New York</span>
-                                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                                            accusantium doloremque laudantium, totam rem aperiam.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                <div class="prt_about_learnbox_left">
-                                    <div class="prt_about_learnbox_year">
-                                        <h1>2010</h1>
-                                    </div>
-                                    <div class="prt_about_learnbox_info">
-                                        <h4>Diploma In Web Design</h4>
-                                        <span>New York</span>
-                                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                                            accusantium doloremque laudantium, totam rem aperiam.</p>
-                                    </div>
-                                </div>
-                            </div>
+                            {% endfor %}
                         </div>
                     </div>
                 </div>
@@ -106,62 +68,21 @@
                     </div>
                     <div class="prt_about_experience">
                         <div class="row">
-                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                <div class="prt_about_experiencebox">
-                                    <div class="prt_about_experience_year">
-                                        <h1>2012</h1>
-                                        <h4>July to 2013 Sep</h4>
-                                    </div>
-                                    <div class="prt_about_experience_info">
-                                        <h4>Junior Ui/Ux Designer</h4>
-                                        <span>Amazon</span>
-                                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                                            accusantium doloremque laudantium, totam rem aperiam.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                <div class="prt_about_experiencebox">
-                                    <div class="prt_about_experience_year">
-                                        <h1>2013</h1>
-                                        <h4>Oct to 2014 Dec</h4>
-                                    </div>
-                                    <div class="prt_about_experience_info">
-                                        <h4>Senior Ui/Ux Designer</h4>
-                                        <span>Adobe</span>
-                                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                                            accusantium doloremque laudantium, totam rem aperiam.</p>
+                            {% for experience in experienceList if experienceList is not empty %}
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <div class="prt_about_experiencebox">
+                                        <div class="prt_about_experience_year">
+                                            <h1>{{ experience.startingYear }}</h1>
+                                            <h4>{{ experience.startingMonth }} To {{ experience.endingDate }}</h4>
+                                        </div>
+                                        <div class="prt_about_experience_info">
+                                            <h4>{{ experience.position }}</h4>
+                                            <span>{{ experience.company }}</span>
+                                            <p>{{ experience.shortDesc }}</p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                <div class="prt_about_experiencebox">
-                                    <div class="prt_about_experience_year">
-                                        <h1>2015</h1>
-                                        <h4>Jun to 2015 Mar</h4>
-                                    </div>
-                                    <div class="prt_about_experience_info">
-                                        <h4>Senior Ui/Ux Designer</h4>
-                                        <span>Google</span>
-                                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                                            accusantium doloremque laudantium, totam rem aperiam.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                <div class="prt_about_experiencebox">
-                                    <div class="prt_about_experience_year">
-                                        <h1>2016</h1>
-                                        <h4>Apr to Present</h4>
-                                    </div>
-                                    <div class="prt_about_experience_info">
-                                        <h4>Lead Ui/Ux Designer</h4>
-                                        <span>Google</span>
-                                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                                            accusantium doloremque laudantium, totam rem aperiam.</p>
-                                    </div>
-                                </div>
-                            </div>
+                            {% endfor %}
                         </div>
                     </div>
                 </div>

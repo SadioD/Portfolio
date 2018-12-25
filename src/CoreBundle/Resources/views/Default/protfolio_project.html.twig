@@ -1,0 +1,18 @@
+<a href="{{ project.url }}" title="{{ project.titleInfo }}" target="blank">
+    <div class="prt_portfolio_img">
+        <img src="{{ project.image.url }}" alt="{{ project.image.alt }}">
+        <div class="prt_portfolio_text">
+            <h4>{{ project.name }}</h4>
+            <p>
+                {{ project.shortDesc }}
+                {% if project.responsive %}
+                <span style="float:right">
+                    <i class="fab fa-firefox"></i>
+                    <i class="fab fa-chrome"></i>
+                    <i class="fab fa-opera"></i>
+                </span>
+                {% endif %}
+            </p>
+        </div>
+    </div>
+</a>

@@ -11,7 +11,7 @@ trait Hydrator
         foreach($donnees as $key => $value) 
         {
 			$method = 'set' . ucfirst($key);
-			if (is_callable([$entity, $method])) {
+			if (is_callable([$this, $method])) {
 				$this->$method($value);
 			}
         }

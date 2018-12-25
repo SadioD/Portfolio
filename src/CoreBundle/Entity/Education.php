@@ -49,7 +49,19 @@ class Education
      * @ORM\Column(name="shortDesc", type="string", length=125, nullable=true)
      */
     private $shortDesc;
+
+    /**
+     * @var string
+     * @ORM\Column(name="firstHtmlClass", type="string", length=180)
+     */
+    private $firstHtmlClass;
     
+    /**
+     * @var string
+     * @ORM\Column(name="secondHtmlClass", type="string", length=180)
+     */
+    private $secondHtmlClass;
+
     public function __construct(array $donnees = []) 
     {
         if (!empty($donnees)) {
@@ -77,6 +89,14 @@ class Education
      * @return string
      */
     public function getShortDesc() { return $this->shortDesc; }
+    /**
+     * @return string
+     */
+    public function getFirstHtmlClass() { return $this->firstHtmlClass; }
+    /**
+     * @return string
+     */
+    public function getSecondHtmlClass() { return $this->secondHtmlClass; }
     // ----------------------------------------------------------------------------------------------------------------------------------
     // SETTERS ---------------------------------------------------------------------------------------------------------------------------
     /**
@@ -118,8 +138,27 @@ class Education
         $this->shortDesc = $shortDesc;
 
         return $this;
+    }
+    /**
+     * @param string $firstHtmlClass
+     * @return Education
+     */
+    public function setFirstHtmlClass($firstHtmlClass)
+    {
+        $this->firstHtmlClass = $firstHtmlClass;
+
+        return $this;
+    }
+    /**
+     * @param string $secondHtmlClass
+     * @return Education
+     */
+    public function setSecondHtmlClass($secondHtmlClass)
+    {
+        $this->secondHtmlClass = $secondHtmlClass;
+
+        return $this;
     }// ----------------------------------------------------------------------------------------------------------------------------------
     // OTHERS ---------------------------------------------------------------------------------------------------------------------------
     // ----------------------------------------------------------------------------------------------------------------------------------            
 }
-

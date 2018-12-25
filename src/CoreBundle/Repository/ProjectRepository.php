@@ -11,7 +11,7 @@ class ProjectRepository extends \Doctrine\ORM\EntityRepository
 {
     // Permet de récupérer les Projects avec leurs Images correspondantes => quand on fait project.getImage dans TWIG, 
     // Pas de requetes SQL supplémentaire déclenchée
-    public function findAllWithImage() 
+    public function findAllWithImages() 
     {
         // "p" represente l'alias de Project et "i" celui de Image
         $qb = $this->createQueryBuilder('p');

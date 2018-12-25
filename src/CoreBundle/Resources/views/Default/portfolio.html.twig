@@ -13,8 +13,62 @@
                 </div>
             </div>
             <div class="prt_portfolio_box popup-gallery">
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 prt_loadmore">
-                    <a class="imageopen" href="http://placehold.it/900X600" title="">
+                {% for project in projectList %}
+                    {% if project.loopStatus == 'start' %}
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 prt_loadmore">
+                            <a href="{{ project.url }}" title="{{ project.titleInfo }}" target="blank">
+                                <div class="prt_portfolio_img">
+                                    <img src="{{ project.image.url }}" alt="{{ project.image.alt }}">
+                                    <div class="prt_portfolio_text">
+                                        <h4>{{ project.name }}</h4>
+                                        <p>
+                                            {{ project.shortDesc }}
+                                            {% if project.responsive %}
+                                                <span style="float:right">
+                                                    <i class="fab fa-firefox"></i>
+                                                    <i class="fab fa-chrome"></i>
+                                                    <i class="fab fa-opera"></i>
+                                                </span>    
+                                            {% endif %}
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                            {#{% include "@Core/Default/portfolio_project.html.twig" %}#}
+                            {% if loop.last %}
+                                </div>
+                            {% endif %}                        
+                    {% else %}
+                            <a href="{{ project.url }}" title="{{ project.titleInfo }}" target="blank">
+                                <div class="prt_portfolio_img">
+                                    <img src="{{ project.image.url }}" alt="{{ project.image.alt }}">
+                                    <div class="prt_portfolio_text">
+                                        <h4>{{ project.name }}</h4>
+                                        <p>
+                                            {{ project.shortDesc }}
+                                            {% if project.responsive %}
+                                                <span style="float:right">
+                                                    <i class="fab fa-firefox"></i>
+                                                    <i class="fab fa-chrome"></i>
+                                                    <i class="fab fa-opera"></i>
+                                                </span>    
+                                            {% endif %}
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                            {#{% include "@Core/Default/portfolio_project.html.twig" %}#}
+                        </div>
+                    {% endif %}
+                {% endfor %}
+
+
+
+
+
+
+                {#<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 prt_loadmore">
+                    <a href="http://google.fr" title="">
                         <div class="prt_portfolio_img">
                             <img src="http://placehold.it/370X369" alt="Portfolio">
                             <div class="prt_portfolio_text">
@@ -30,7 +84,7 @@
                             </div>
                         </div>
                     </a>
-                    <a class="popup-youtube" href="https://www.youtube.com/embed/D_5L2lmgTQY" title="">
+                    <a href="https://www.youtube.com/embed/D_5L2lmgTQY" title="">
                         <div class="prt_portfolio_img">
                             <img src="http://placehold.it/370X370" alt="Portfolio">
                             <div class="prt_portfolio_text">
@@ -57,7 +111,7 @@
                             </div>
                         </div>
                     </a>
-                    <a class="imageopen" href="http://placehold.it/900X600" title="">
+                    <a href="http://placehold.it/900X600" title="">
                         <div class="prt_portfolio_img">
                             <img src="http://placehold.it/370X280" alt="Portfolio">
                             <div class="prt_portfolio_text">
@@ -74,7 +128,6 @@
                         </div>
                     </a>
                 </div>
-                {# Projets Idi #}
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 prt_loadmore">
                     <a class="popup-youtube" href="https://www.youtube.com/embed/D_5L2lmgTQY" title="">
                         <div class="prt_portfolio_img">
@@ -85,7 +138,7 @@
                             </div>
                         </div>
                     </a>
-                    <a class="imageopen" href="http://placehold.it/900X600" title="">
+                    <a href="http://placehold.it/900X600" title="">
                         <div class="prt_portfolio_img">
                             <img src="http://placehold.it/370X460" alt="Portfolio">
                             <div class="prt_portfolio_text">
@@ -96,7 +149,7 @@
                     </a>
                 </div>
                 <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 prt_loadmore">
-                    <a class="imageopen" href="http://placehold.it/900X600" title="">
+                    <a href="http://placehold.it/900X600" title="">
                         <div class="prt_portfolio_img">
                             <img src="http://placehold.it/770X369" alt="Portfolio">
                             <div class="prt_portfolio_text">
@@ -118,7 +171,7 @@
                     </a>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 prt_loadmore">
-                    <a class="imageopen" href="http://placehold.it/900X600" title="">
+                    <a href="http://placehold.it/900X600" title="">
                         <div class="prt_portfolio_img">
                             <img src="http://placehold.it/370X369" alt="Portfolio">
                             <div class="prt_portfolio_text">
@@ -147,7 +200,7 @@
                             </div>
                         </div>
                     </a>
-                    <a class="imageopen" href="http://placehold.it/900X600" title="">
+                    <a href="http://placehold.it/900X600" title="">
                         <div class="prt_portfolio_img">
                             <img src="http://placehold.it/370X280" alt="Portfolio">
                             <div class="prt_portfolio_text">
@@ -167,7 +220,7 @@
                             </div>
                         </div>
                     </a>
-                    <a class="imageopen" href="http://placehold.it/900X600" title="">
+                    <a href="http://placehold.it/900X600" title="">
                         <div class="prt_portfolio_img">
                             <img src="http://placehold.it/370X460" alt="Portfolio">
                             <div class="prt_portfolio_text">
@@ -178,7 +231,7 @@
                     </a>
                 </div>
                 <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 prt_loadmore">
-                    <a class="imageopen" href="http://placehold.it/900X600" title="">
+                    <a href="http://placehold.it/900X600" title="">
                         <div class="prt_portfolio_img">
                             <img src="http://placehold.it/770X369" alt="Portfolio">
                             <div class="prt_portfolio_text">
@@ -198,10 +251,12 @@
                             </div>
                         </div>
                     </a>
-                </div>
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
-                    <button class="prt_btn" id="loadMore">load more</button>
-                </div>
+                </div>#}
+                {% if projectList|length > 6 %}
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                        <button class="prt_btn" id="loadMore">load more</button>
+                    </div>
+                {% endif %}
             </div>
         </article>
     </div>

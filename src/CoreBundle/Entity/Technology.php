@@ -30,14 +30,14 @@ class Technology
     /**
      * Contient le nom de l'icone (ex: fa fa-trash) ou le nom de l'image
      * @var string
-     * @ORM\Column(name="iconUrl", type="string", length=255, unique=true)
+     * @ORM\Column(name="iconUrl", type="string", length=180, unique=true)
      */
     private $iconUrl;
 
     /**
      * Contient le label de l'icone (ex: supprimer) ou l'alt de l'image
      * @var string
-     * @ORM\Column(name="iconLabel", type="string", length=255, unique=true)
+     * @ORM\Column(name="iconLabel", type="string", length=180, unique=true)
      */
     private $iconLabel;
 
@@ -51,7 +51,7 @@ class Technology
     /**
      * Url de redirection au click d'un lien
      * @var string
-     * @ORM\Column(name="redirectUrl", type="string", length=255, nullable=true)
+     * @ORM\Column(name="redirectUrl", type="string", length=180, nullable=true)
      */
     private $redirectUrl;
 

@@ -10,4 +10,12 @@ namespace CoreBundle\Repository;
  */
 class ExperienceRepository extends \Doctrine\ORM\EntityRepository
 {
+    // On recupère les résultats au format Array pour optimiser le temps de traitement. 
+    // On peut se le permettre vu que nous n'aurons pas besoin de faire $entité->setAttr() une fois les entités recupérés de la BDD
+    public function findAllArray() 
+    {
+        return $this->createQueryBuilder('ex')
+                    ->orderBy('ex.id', 'DESC')
+                    ->getQuery()->getArrayResult();
+    }
 }

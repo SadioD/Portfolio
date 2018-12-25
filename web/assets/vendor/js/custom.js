@@ -114,7 +114,7 @@ Assigned to: ThemeForest
 	});
 	
 	// Portfolio popup Js
-	$('.popup-gallery').magnificPopup({
+	/*$('.popup-gallery').magnificPopup({
 		delegate: 'a.imageopen',
 		type: 'image',
 		tLoading: 'Loading image #%curr%...',
@@ -130,10 +130,10 @@ Assigned to: ThemeForest
 				return item.el.attr('title') + '<small></small>';
 			}
 		}
-	});
+	});*/
 	
 	// Portfolio video Popup js
-	$('a.popup-youtube').magnificPopup({
+	/*$('a.popup-youtube').magnificPopup({
 		disableOn: 0,
 		type: 'iframe',
 		mainClass: 'mfp-fade',
@@ -141,7 +141,7 @@ Assigned to: ThemeForest
 		preloader: false,
 
 		fixedContentPos: false
-	});
+	});*/
 	
 	// Service Page Image Slides Js
 	$('div.prt_img_click').on('click' , function(){
