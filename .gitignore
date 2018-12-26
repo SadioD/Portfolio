@@ -1,7 +1,7 @@
 /.web-server-pid
-/app/config/routing.yml
 /app/config/parameters.yml
 # Ajout 1
+/app/config/routing.yml
 ###
 /build/
 /phpunit.xml
@@ -19,6 +19,6 @@
 /vendor/
 /web/bundles/
 # Ajouts
+#/src/Sadio/AuthBundle/Resources/config/*
 /src/CoreBundle/Resources/config/*
-/src/Sadio/AuthBundle/Resources/config/*
 ###
