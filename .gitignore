@@ -19,6 +19,6 @@
 /vendor/
 /web/bundles/
 # Ajouts
-#/src/Sadio/AuthBundle/Resources/config/*
+/src/Sadio/AuthBundle/Resources/config/*
 /src/CoreBundle/Resources/config/*
 ###
