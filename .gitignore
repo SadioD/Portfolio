@@ -21,5 +21,4 @@
 # Ajouts
 /src/Sadio/AuthBundle/Resources/config/*
 /src/CoreBundle/Resources/config/*
-!src/CoreBundle/Resources/config/services.yml
 ###
