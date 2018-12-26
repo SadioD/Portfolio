@@ -1,3 +1,4 @@
+# Routes du AuthBundle
 sadio_auth:
     resource: "@SadioAuthBundle/Resources/config/routing.yml"
     prefix:   /

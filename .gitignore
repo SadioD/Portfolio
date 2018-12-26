@@ -16,3 +16,5 @@
 /vendor/
 /web/bundles/
 /src/Sadio/AuthBundle/Resources/config/*
+/src/CoreBundle/Resources/config/routing.yml
+/app/config/routing.yml
