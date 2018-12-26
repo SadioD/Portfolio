@@ -19,6 +19,7 @@ class AppKernel extends Kernel
             new CoreBundle\CoreBundle(),
             // Permet de rendre certaines actions (editionDate, slugDefinition) automatiques (lors de Prepersist, etc.) => Getme
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
+            new Sadio\AuthBundle\SadioAuthBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

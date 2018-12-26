@@ -24,9 +24,9 @@ class DefaultController extends Controller
         if($request->isMethod('POST')) 
         {
             if ($form->handleRequest($request)->isValid()) {
-                return $this->processForm($message);
+                $this->saveForm($message);
             } else {
-                $this->addFlash('notice', 'Oops... Your Message could not be sent!');
+                $this->addFlash('redFlash', 'Oops... Your Message could not be sent. Please try again');
             }
         }
         // On affiche la vue après avoir recupéré les entités 
@@ -39,14 +39,11 @@ class DefaultController extends Controller
     }// -----------------------------------------------------------------------------------------------------------------------------
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // Traite le formulaire de Contact -----------------------------------------------------------------------------
-    public function processForm($message) {
-        // Save Form + Flash and redirect
-        /*$offer->setUser($this->getDoctrine()->getManager()->find(User::class, $userId));
-        $this->getDoctrine()->getManager()->persist($offer);
+    // Save Form + Flash 
+    public function saveForm($message) {
+        $this->getDoctrine()->getManager()->persist($message);
         $this->getDoctrine()->getManager()->flush();
         
-        $this->addFlash('notice', 'The offer has been saved!');
-        return $this->redirectToRoute('sadioJobsP_singlePost', ['offerSlug' => $offer->getSlug()]);*/
-        return $this->redirectToRoute('core_homepage');
+        $this->addFlash('greenFlash', 'Your Message has been delivered.');
     }// -----------------------------------------------------------------------------------------------------------------------------
 }

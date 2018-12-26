@@ -61,6 +61,12 @@ class LoadTechnology extends Fixture
                 'redirectUrl'   => '#'
             ],
             [
+                'iconUrl'       => 'fa fa-wordpress fa-4x githubColor',
+                'iconLabel'     => 'WordPress',
+                'seoFollow'     => true,
+                'redirectUrl'   => 'https://angular.io/'
+            ],
+            [
                 'iconUrl'       => 'fab fa-php fa-4x phpColor',
                 'iconLabel'     => 'PHP',
                 'seoFollow'     => true,
@@ -75,6 +81,12 @@ class LoadTechnology extends Fixture
             [
                 'iconUrl'       => 'http://placehold.it/170X110',
                 'iconLabel'     => 'Assetic Web Image',
+                'seoFollow'     => false,
+                'redirectUrl'   => '#'
+            ],
+            [
+                'iconUrl'       => 'http://placehold.it/170X110',
+                'iconLabel'     => 'Symfony Web Image',
                 'seoFollow'     => false,
                 'redirectUrl'   => '#'
             ]

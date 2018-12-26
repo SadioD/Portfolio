@@ -31,7 +31,7 @@ class Message
     /**
      * @var string
      * @ORM\Column(name="authorName", type="string", length=255)
-     * @Assert\Length(min=5, minMessage="Your name must have at least {{ limit }} characters.")
+     * @Assert\Length(min=3, minMessage="Your name must have at least {{ limit }} characters.")
      */
     private $authorName;
 
@@ -45,7 +45,7 @@ class Message
     /**
      * @var string
      * @ORM\Column(name="subject", type="string", length=255)
-     * @Assert\Length(min=10, minMessage="Subject must have at least {{ limit }} characters.")
+     * @Assert\Length(min=5, minMessage="Subject must have at least {{ limit }} characters.")
      */
     private $subject;
 

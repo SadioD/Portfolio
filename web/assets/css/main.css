@@ -1,3 +1,12 @@
+/* Base Layout - Flash Message */
+.redFlash {
+    color: red;
+}
+.greenFlash {
+    color: green;
+}
+
+
 /* Page Strenght - Technology - Slider */
 .htmlColor:hover {
     color: rgb(221, 75, 37);

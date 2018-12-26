@@ -51,7 +51,7 @@ class Technology
     /**
      * Url de redirection au click d'un lien
      * @var string
-     * @ORM\Column(name="redirectUrl", type="string", length=180, nullable=true)
+     * @ORM\Column(name="redirectUrl", type="string", length=180, nullable=false)
      */
     private $redirectUrl;
 
@@ -118,9 +118,9 @@ class Technology
      * @param string $redirectUrl
      * @return Technology
      */
-    public function setRedirectUrl($iconLabels)
+    public function setRedirectUrl($redirectUrl)
     {
-        $this->iconLabels = $iconLabels;
+        $this->redirectUrl = $redirectUrl;
 
         return $this;
     }// ----------------------------------------------------------------------------------------------------------------------------------
