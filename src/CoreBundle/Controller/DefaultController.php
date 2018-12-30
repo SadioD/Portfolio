@@ -45,5 +45,6 @@ class DefaultController extends Controller
         $this->getDoctrine()->getManager()->flush();
         
         $this->addFlash('greenFlash', 'Your Message has been delivered.');
+        //return $this->redirectToRoute('core_homepage');
     }// -----------------------------------------------------------------------------------------------------------------------------
 }

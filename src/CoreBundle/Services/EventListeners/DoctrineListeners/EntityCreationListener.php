@@ -37,13 +37,24 @@ class EntityCreationListener
         { 
             return; 
         }
-        $email          = $entity->getAuthorEmail();
-        $messageTitle   = 'Sadio DIALLO - Confirmation de réception';
-        $messageContent = 'Bonjour ' . $entity->getAuthorName() . ', <br/>';
-        $messageContent .= 'Je vous confirme avoir bien reçu votre message. <br/>';
-        $messageContent .= 'Je vous ferai un retour dès que possible. <br/> Cordialement. <br/><br/> Sadio DIALLO.';
+        $recepientEmail  = $entity->getAuthorEmail();
+        $recepientName   = $entity->getAuthorName();
+        
+        // Si $authorName = $recepientName == Sadio DIALLO => Il s'agit d'une réponse à un email recu
+        // Sinon => Il s'agit d'un envoi d'accusé de réception (=> on le définit dans le ELSE)
+        if ($recepientEmail == $this->mailer->getAdminEmail()) {
+            $messageTitle    = $entity->getSubject();
+            $messageContent  = $entity->getContent();
+        } else {
+            $messageTitle    = 'AutoReply - Confirmation de réception';
+            $messageContent  = '<p>Bonjour ' . $entity->getAuthorName() . ', <br/><br/>';
+            $messageContent .= 'Je vous confirme avoir bien reçu votre message. <br/><br/>';
+            $messageContent .= 'Je vous ferai un retour dès que possible. <br/><br/> Cordialement. <br/><br/> Sadio DIALLO.</p>';
+        }
+
+        
             
-        $this->mailer->sendNotification($email, $messageTitle, $messageContent);
+        $this->mailer->sendNotification($recepientEmail, $recepientName, $messageTitle, $messageContent);
         $this->purgator->purgeMessageList($arg);
     }// ------------------------------------------------------------------------------------------------------------------------
 }

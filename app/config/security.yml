@@ -1,11 +1,18 @@
 # To get started with security, check out the documentation:
 # https://symfony.com/doc/current/security.html
 security:
+    encoders:
+        Sadio\AuthBundle\Entity\User:            	                  # bcrypt est l'encodeur des mots de passe
+            algorithm: bcrypt
+            cost: 12
 
     # https://symfony.com/doc/current/security.html#b-configuring-how-users-are-loaded
+    # Le nom du provider d'usateurs est sadio_authbundle. ca aurait pu etre amadou
     providers:
-        in_memory:
-            memory: ~
+        sadio_authbundle:
+            entity:
+                class:    Sadio\AuthBundle\Entity\User
+                property: username
 
     firewalls:
         # disables authentication for assets and the profiler, adapt it according to your needs
@@ -14,17 +21,26 @@ security:
             security: false
 
         main:
-            anonymous: ~
             # activate different ways to authenticate
-
             # https://symfony.com/doc/current/security.html#a-configuring-how-your-users-will-authenticate
             #http_basic: ~
-
             # https://symfony.com/doc/current/security/form_login_setup.html
             #form_login: ~
+            pattern:      ^/                                      # Ce parefeu gère toutes les url commencant par / (=> toute sles urls du site)
+            anonymous:    true	                                  # Le parefeu permettra aux anonymes de passer. (=> On bloquera les accès de certaines pages via le controle d'accès)
+            provider:     sadio_authbundle	                      # Le nom du fournisseur d'identifiants
+            form_login:
+                login_path: sadio_auth_security_login             # Le nom de la route pour accéder à la page d'authentification 
+                check_path: sadio_auth_security_check	            # le nom de la route pour accéder à la page de vérification des identifiants postés par le form d'authentification'
+                default_target_path: sadio_auth_security_profile  # Le nom de la route vers laquelle l'user sera redirigé après l'authentification
+            logout:
+                path:       sadio_auth_security_logout            # Le nom de la route pour se déconnecter
+                target:     sadio_auth_security_login             # Le nom de la route vers laquelle l'user sera redirigé après avoir été déconnecté  
+            #remember_me:
+                #secret:     "%secret%"                           # L'option remember_me permet d'éviter à l'User d'entrer encore ses identifiants pour se connecter (cookies). %secret% est la variale définie dans parameters.yml, qui save le token permettant de se rappeler du User.
             logout_on_user_change: true
       
       
     access_control:
         - { path: ^/admin,        roles: ROLE_ADMIN }                                   # Toutes les urls commencant par /admin sont protégées => il faut etre ADMIN
-        - { path: ^/auth-login/$, allow_if: "is_anonymous() and !is_authenticated()" }  # L'url de connexion ne peut être accessible que par les Users qui ne sont pas authentifiés
+        #- { path: ^/auth-login/$, allow_if: "is_anonymous() and !is_authenticated()" }  # L'url de connexion ne peut être accessible que par les Users qui ne sont pas authentifiés

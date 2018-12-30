@@ -32,3 +32,51 @@
 .dbColor:hover {
     color: #c82663;
 }
+
+/* Page Login */
+.formContainer {
+    background:rgb(27, 26, 26);
+    border-color: rgba(223, 54, 12, 0.129);
+}
+.formInput {
+    background: black;
+    border-color: black;
+    color: lightgray;
+}
+#LoginContainer {
+    margin-top: 10%;
+}
+#loginButton, #replyButton {
+    background: rgb(202, 55, 44);
+    border-color: black;
+}
+#loginButton:hover, #replyButton:hover {
+    background: rgb(164, 46, 37);
+    border-color: black;
+}
+#alertForm {
+    background: rgba(202, 55, 44, 0.279);
+    color: white;
+}
+
+/* Page profile */
+#messagesBox {
+    margin-top: 6%;
+    background: rgba(202, 55, 44, 0.279);
+}
+.viewLink {
+    color: rgba(181, 102, 99, 0.83);
+}
+.inboxTitle {
+    font-size: 130%;
+}
+
+/* Page reply */
+#replyDiv {
+    margin-top: 5%;
+}
+
+/* AuthBundle Layout */
+.menuLinks {
+    color: rgba(181, 102, 99, 0.83);
+}

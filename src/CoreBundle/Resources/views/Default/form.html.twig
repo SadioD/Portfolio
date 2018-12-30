@@ -1,0 +1,44 @@
+{{ form_start(form)}}
+
+    {# Les erreurs générales du formulaire. #}
+    {{ form_errors(form) }}
+
+    {# Génération du label + error + widget pour les champs. #}
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+        {{ form_widget(form.authorName, {'attr': {'class': 'require', 'placeholder': 'Your Name'}}) }}
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+        {{ form_widget(form.authorEmail, {'attr': {'class':'require', 'placeholder':'Your Email', 'data-valid':'email',
+        'data-error':'Email should be valid.'}}) }}
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        {{ form_errors(form.authorName) }}
+        {{ form_errors(form.authorEmail) }}
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        {{ form_widget(form.subject, {'attr': {'class':'require', 'placeholder':'Subject'}}) }}
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        {{ form_errors(form.subject) }}
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        {{ form_widget(form.content, {'attr': {'class':'require', 'placeholder':'Message', 'rows':'4'}}) }}
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        {{ form_errors(form.content) }}
+    </div>
+
+    {# Génération automatique des champs pas encore écrits. Dans cet exemple, ce serait le champ CSRF (géré automatiquement
+    par Symfony !)
+    et tous les champs cachés (type « hidden »). #}
+    {{ form_rest(form) }}
+    
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="response"></div>
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <button type="submit" id="submitForm" class="prt_btn" form-type="contact">submit</button>
+    </div>
+
+{# Fermeture de la balise form du formulaire HTML #}
+{{ form_end(form) }}

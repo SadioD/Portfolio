@@ -18,15 +18,20 @@ class Mailer
         $this->mailer     = $mailerObject;
         $this->adminEmail = $adminEmailAdress;
     }// ---------------------------------------------------------------------------------------------------------
-    // METHODS -------------------------------------------------------------------------------------------------
-    public function sendNotification($email, $messageTitle, $messageContent) {
+    // GETTERS -------------------------------------------------------------------------------------------------
+    public function getAdminEmail() {
+        return $this->adminEmail;
+    }// ---------------------------------------------------------------------------------------------------------
+    // OTHERS -------------------------------------------------------------------------------------------------
+    public function sendNotification($recepientEmail, $recepientName, $messageTitle, $messageContent) {
         // On définit le message (Sujet + corps)
         $message = new \Swift_Message($messageTitle);
-        $message->addPart($messageContent);
+        $message->addPart($messageContent, 'text/html');
+        //$message->setBody($messageContent, 'text/html');
         
         // On définit le destinataire et l'expéditeur
-        $message->setTo($email)
-                ->setFrom($this->adminEmail);
+        $message->setTo([$recepientEmail => $recepientName])
+                ->setFrom([$this->adminEmail => 'Sadio DIALLO']);
 
         // Enfin on envoie le message
         $this->mailer->send($message);

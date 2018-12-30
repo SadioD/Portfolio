@@ -241,7 +241,7 @@ Assigned to: ThemeForest
 		});
 		return check;
 	}
-	$(".submitForm").on("click", function(e) {
+	$("#submitForm").on("click", function(e) {
 		var _this = $(this);
 		var targetForm = _this.closest('form');
 		var errroTarget = targetForm.find('.response');

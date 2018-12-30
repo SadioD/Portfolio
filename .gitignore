@@ -2,6 +2,7 @@
 /app/config/parameters.yml
 # Ajout 1
 /app/config/routing.yml
+/app/config/security.yml
 ###
 /build/
 /phpunit.xml
@@ -20,5 +21,6 @@
 /web/bundles/
 # Ajouts
 /src/Sadio/AuthBundle/Resources/config/*
+/src/Sadio/AuthBundle/DataFixtures/*
 /src/CoreBundle/Resources/config/*
 ###

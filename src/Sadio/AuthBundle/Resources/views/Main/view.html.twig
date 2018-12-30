@@ -1,0 +1,47 @@
+{% extends "@SadioAuth/layout.html.twig" %}
+    {% block admin_body %}
+        <section>
+            <div class="row" id="messagesBox">
+                <div class="col-xs-3 col-sm-3">
+                    {% if message.receiverEmail is not empty %}
+                    <h2 class="inboxTitle">To</h2>
+                    {% else %}
+                    <h2 class="inboxTitle">From</h2>
+                    {% endif %}
+                </div>
+                <div class="col-xs-9 col-sm-9 text-center">
+                    <h2 class="inboxTitle">Content</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-3 col-sm-3">
+                    {% if message.receiverEmail is not empty %}
+                    <p>{{ message.receiverEmail }}</p>
+                    {% else %}
+                    <p>{{ message.authorName }}</p>
+                    {% endif %}
+                </div>
+                <div class="col-xs-9 col-sm-9">
+                    <p>{{ message.content|nl2br }}</p>
+                    <div class="row">
+                        <div class="col-xs-8 col-sm-10 text-right">
+                            <p>
+                                {{ message.creationDate|date("d/m/Y") }} <br />
+                                {{ message.status }}
+                            </p>
+                        </div>
+                        <div class="col-xs-3 col-sm-2">
+                            <p>
+                                <a href="{{ path('sadio_auth_security_reply', {'id': message.id}) }}" class="btn btn-primary btn-xs">
+                                    Reply
+                                </a><br/>
+                                <a href="{{ path('sadio_auth_security_delete', {'id': message.id}) }}" class="btn btn-danger btn-xs">
+                                    Delete
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    {% endblock admin_body %}

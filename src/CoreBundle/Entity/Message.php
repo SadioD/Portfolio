@@ -44,6 +44,19 @@ class Message
 
     /**
      * @var string
+     * @ORM\Column(name="receiverEmail", type="string", length=255, nullable=true)
+     * @Assert\Email(message="Your email is not a valid one.")
+     */
+    private $receiverEmail;
+
+    /**
+     * @var string
+     * @ORM\Column(name="receiverName", type="string", length=255, nullable=true)
+     */
+    private $receiverName;
+
+    /**
+     * @var string
      * @ORM\Column(name="subject", type="string", length=255)
      * @Assert\Length(min=5, minMessage="Subject must have at least {{ limit }} characters.")
      */
@@ -106,6 +119,10 @@ class Message
      * @return string
      */
     public function getStatus() { return $this->status; }
+    /**
+     * @return string
+     */
+    public function getReceiverEmail() { return $this->receiverEmail; }
     // ----------------------------------------------------------------------------------------------------------------------------------
     // SETTERS ---------------------------------------------------------------------------------------------------------------------------
     /**
@@ -144,7 +161,7 @@ class Message
      */
     public function setContent($content)
     {
-        $this->content = $content;
+        $this->content = nl2br($content);
 
         return $this;
     }
@@ -165,6 +182,16 @@ class Message
     public function setStatus($status)
     {
         $this->status = $status;
+
+        return $this;
+    }
+    /**
+     * @param string $receiverEmail
+     * @return Message
+     */
+    public function setReceiverEmail($receiverEmail)
+    {
+        $this->receiverEmail = $receiverEmail;
 
         return $this;
     }// ----------------------------------------------------------------------------------------------------------------------------------

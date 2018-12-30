@@ -3,7 +3,7 @@
 parameters:
     #parameter_name: value
     # Ce paramètre permet d'injecter dans le Service Mailer l'addresse email de l'expéditeur
-    admin_email: amasadio@gmail.com
+    #admin_email: amasadio@gmail.com
 
 services:
     # default configuration for services in *this* file
@@ -46,9 +46,21 @@ services:
         public: true
         tags: ['controller.service_arguments']
 
+    # controllers are imported separately to make sure they're public
+    # and have a tag that allows actions to type-hint services
+    Sadio\AuthBundle\Controller\:
+        resource: '../../src/Sadio/AuthBundle/Controller'
+        public: true
+        tags: ['controller.service_arguments']
+
     
     #### DataFixtures ##########################################################################
     # Ce code permet d'autoriser les dossiers DataFixtures à etre utiliser comme service (load:fixtures)
     CoreBundle\DataFixtures\:
         resource: '../../src/CoreBundle/DataFixtures'
+        tags: ['doctrine.fixture.orm']
+
+    # Ce code permet d'autoriser les dossiers DataFixtures à etre utiliser comme service (load:fixtures)
+    Sadio\AuthBundle\DataFixtures\:
+        resource: '../../src/Sadio/AuthBundle/DataFixtures'
         tags: ['doctrine.fixture.orm']
