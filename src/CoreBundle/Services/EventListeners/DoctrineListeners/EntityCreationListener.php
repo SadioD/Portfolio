@@ -33,27 +33,29 @@ class EntityCreationListener
 
         // Si c'est un entité de Message qui a été persisté =>
         // On envoie l'email de confirmation de réception du message et on purge la liste des vieux messages
-        if (!$entity instanceof Message) 
-        { 
+        if (!$entity instanceof Message)  { 
             return; 
         }
-        $recepientEmail  = $entity->getAuthorEmail();
-        $recepientName   = $entity->getAuthorName();
-        
-        // Si $authorName = $recepientName == Sadio DIALLO => Il s'agit d'une réponse à un email recu
-        // Sinon => Il s'agit d'un envoi d'accusé de réception (=> on le définit dans le ELSE)
-        if ($recepientEmail == $this->mailer->getAdminEmail()) {
+        // Définition du Message à envoyer en fonction de l'expédieut
+        if ($entity->getAuthorEmail() == $this->mailer->getAdminEmail()) 
+        {
+            // CAS 1: Expediteur == Sadio DIALLO => Il s'agit d'une réponse à un email recu
+            $recepientEmail  = $entity->getReceiverEmail();
+            $recepientName   = $entity->getReceiverName();
             $messageTitle    = $entity->getSubject();
             $messageContent  = $entity->getContent();
-        } else {
+        } 
+        else 
+        {
+            // CAS 2: Expediteur == Visiteur => Envoi d'accusé de réception (on définit le contenu)
+            $recepientEmail  = $entity->getAuthorEmail();
+            $recepientName   = $entity->getAuthorName();
             $messageTitle    = 'AutoReply - Confirmation de réception';
             $messageContent  = '<p>Bonjour ' . $entity->getAuthorName() . ', <br/><br/>';
             $messageContent .= 'Je vous confirme avoir bien reçu votre message. <br/><br/>';
             $messageContent .= 'Je vous ferai un retour dès que possible. <br/><br/> Cordialement. <br/><br/> Sadio DIALLO.</p>';
         }
-
-        
-            
+        // On appelle les deux Services Mailer et Purgator    
         $this->mailer->sendNotification($recepientEmail, $recepientName, $messageTitle, $messageContent);
         $this->purgator->purgeMessageList($arg);
     }// ------------------------------------------------------------------------------------------------------------------------

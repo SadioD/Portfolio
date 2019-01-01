@@ -1,8 +1,18 @@
 {% extends "base.html.twig" %}
     {% block body %}
-        <div class="prt_main_wrapper">
+        {# Menu + Contenu des pages  #}
+        <div class="prt_main_wrapper">            
             {# La classe prt_home_wrapper ci-dessous contient le background image blanc dans le fichier style.css #}
             <header class="prt_home_wrapper">
+                {# Choix de la langue #}
+                <div id="languageBox">
+                    {% if app.request.locale == 'fr' %}
+                        <a href="http://localhost/projects/portfolio/web/app_dev.php/en/"><span class="flag-icon flag-icon-us"></span> ENG</a>
+                    {% else %}
+                        <a href="http://localhost/projects/portfolio/web/app_dev.php/fr/"><span class="flag-icon flag-icon-fr"></span> FR</a>
+                    {% endif %}
+                </div>
+                
                 {#---------------------------- Spining Logo --------------------------------------------#}
                 <div class="prt_logo_wrapper">
                     <a><img src="{{ asset('assets/images/logo.png')}}" alt="Logo" id="prt_close_tab"></a>

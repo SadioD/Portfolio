@@ -1,0 +1,42 @@
+# Partie - ABOUT ME
+profile:
+    title:      	About Me
+    subtitle:   	Who am i
+    shortDesc:  	>           # Max 686 caractères
+                	There are many variations of passages of Lorem Ipsum available, but the majority have
+                	suffered alteration in some form, by injected humour, or randomised words which don't
+                	look even slightly believable. If you are going to use a passage of Lorem Ipsum, you
+                	need to be sure there isn't anything embarrassing hidden in the middle of text. All the
+                	Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary,
+                	making this the first true generator on the Internet. It uses a dictionary of over 200
+                  Latin words, combined with a handful of model sentence structures.
+    buttons:
+        resume:   Download Resume
+        hireMe:   Hire Me
+        
+# Partie - EDUCATION
+education:
+    title:      	Education
+    subtitle:   	learning
+        
+# Partie - EXPERIENCE
+experience:
+    title:      	Experience
+    subtitle:     Involvement
+
+# Partie - Hobbies
+hobbies:
+    title:      	Hobbies
+    subtitle:   	What I Like
+    shortDesc:  	>             # Max 387 caractères
+                	There are many variations of passages of Lorem Ipsum available, but the majority have
+                	suffered alteration in some form, by injected humour, or randomised words which don't
+                	look even slightly believable. If you are going to use a passage of Lorem Ipsum, you
+                	need to be sure there isn't anything embarrassing hidden in the middle of text.
+    icons:
+        plane:    Traveling
+        gamepad:  Video Games
+        swimmer:  Swimming
+        book:     Reading
+        jogger:   Jogging
+        music:    Music

@@ -3,14 +3,15 @@
         <img src="{{ asset('assets/images/up_arrow.png')}}" alt="Close" class="prt_close">
     </aside>
     <article>
+        {#----------------------------- WHAT I DO -----------------------------#}
         <div class="prt_services_slider_wrapper prt_bottompadder115">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="prt_heading_wrapper">
                             <div class="prt_heading">
-                                <h1>What I do</h1>
-                                <p>take a look</p>
+                                <h1>{{ 'whatIdo.title'|trans({}, 'strength') }}</h1>
+                                <p>{{ 'whatIdo.subtitle'|trans({}, 'strength') }}</p>
                             </div>
                         </div>
                     </div>
@@ -22,13 +23,12 @@
                             <img class="img_4" src="http://placehold.it/470X390" alt="Service">
                         </div>
                     </div>
-                    {# Codé en dur #}
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                         <div class="prt_services_slider_box">
                             {% for skills in skillsList %}
-                                <div class="{{ skills.htmlClass }}" id="{{ skills.htmlID }}">
+                                <div class="{{ skills.htmlClass }}" id="{{ skills.htmlID }}" itemscope itemtype="http://schema.org/Person">
                                     <img src="http://placehold.it/86X100" alt="Service icon">
-                                    <h4>{{ skills.name }}</h4>
+                                    <h4 itemprop="knowsAbout">{{ skills.name }}</h4>
                                     <p>{{ skills.shortDesc }}</p>
                                 </div>
                             {% endfor %}
@@ -37,7 +37,7 @@
                 </div>
             </div>
         </div>
-        {# Codé en dur #}
+        {#----------------------------- DASHBOARD KPIs (Achieved Projects, etc.) -----------------------------#}
         <div class="prt_couter_wrapper prt_toppadder80 prt_bottompadder50">
             <div class="container">
                 <div class="row">
@@ -45,68 +45,68 @@
                         <div class="prt_counter_box">
                             <img src="http://placehold.it/100X100" alt="Clients">
                             <h3 class="timer" data-from="0" data-to="12" data-speed="5000"></h3>
-                            <p>Web Technologies</p>
+                            <p>{{ 'dashboard.kpis.first'|trans({}, 'strength') }}</p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                         <div class="prt_counter_box">
                             <img src="http://placehold.it/100X100" alt="Projects">
                             <h3 class="timer" data-from="0" data-to="5" data-speed="5000"></h3>
-                            <p>Projects Done</p>
+                            <p>{{ 'dashboard.kpis.second'|trans({}, 'strength') }}</p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                         <div class="prt_counter_box">
                             <img src="http://placehold.it/100X100" alt="Awards">
                             <h3 class="timer" data-from="0" data-to="3" data-speed="5000"></h3>
-                            <p>Degrees</p>
+                            <p>{{ 'dashboard.kpis.third'|trans({}, 'strength') }}</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        {# Codé en dur #}
+        {#----------------------------- SKILLS (Domaines d'expertise: SEO, etc.) -----------------------------#}
         <div class="prt_skills_wrapper prt_toppadder115 prt_bottompadder115" style="display: block; bottom: 0px; top: 0px;">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="prt_heading_wrapper">
                             <div class="prt_heading">
-                                <h1>My Skills</h1>
-                                <p>Expert in</p>
+                                <h1>{{ 'skills.title'|trans({}, 'strength') }}</h1>
+                                <p>{{ 'skills.subtitle'|trans({}, 'strength') }}</p>
                             </div>
                         </div>
                     </div>
-                    {# COmpresser ou supprimer les images en arrière pln figurant dans style.css #}
                     <div id="canvas">
                         <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 text-center">
                             <div class="circle" id="circles-1"></div>
-                            <h5>Photoshop</h5>
+                            <h5>{{ 'skills.fields.first'|trans({}, 'strength') }}</h5>
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 text-center">
                             <div class="circle" id="circles-2"></div>
-                            <h5>Illustrator</h5>
+                            <h5>{{ 'skills.fields.second'|trans({}, 'strength') }}</h5>
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 text-center">
                             <div class="circle" id="circles-3"></div>
-                            <h5>Html & Css</h5>
+                            <h5>{{ 'skills.fields.third'|trans({}, 'strength') }}</h5>
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 text-center">
                             <div class="circle" id="circles-4"></div>
-                            <h5>WordPress</h5>
+                            <h5>{{ 'skills.fields.fourth'|trans({}, 'strength') }}</h5>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        {#----------------------------- TECHNOLOGIES (Programming Languages, etc.) -----------------------------#}
         <div class="prt_client_slider_wrapper">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="prt_heading_wrapper">
                             <div class="prt_heading">
-                                <h1>Technologies</h1>
-                                <p>Worked With</p>
+                                <h1>{{ 'technology.title'|trans({}, 'strength') }}</h1>
+                                <p>{{ 'technology.subtitle'|trans({}, 'strength') }}</p>
                             </div>
                         </div>
                     </div>
@@ -115,7 +115,7 @@
                         <div class="prt_client_slider">
                             <div class="owl-carousel owl-theme">
                                 {% for technology in technologies %}
-                                    <div class="item">
+                                    <div class="item" itemscope itemtype="http://schema.org/Person" itemprop="knowsAbout">
                                         {% if technology.seoFollow %}
                                             <a href="{{ technology.redirectUrl }}"><i class="{{ technology.iconUrl }}" aria-hidden="true"></i></a><br />
                                             <p>{{ technology.iconLabel }}</p>

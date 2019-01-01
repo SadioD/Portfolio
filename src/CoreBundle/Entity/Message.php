@@ -123,6 +123,10 @@ class Message
      * @return string
      */
     public function getReceiverEmail() { return $this->receiverEmail; }
+    /**
+     * @return string
+     */
+    public function getReceiverName() { return $this->receiverName; }
     // ----------------------------------------------------------------------------------------------------------------------------------
     // SETTERS ---------------------------------------------------------------------------------------------------------------------------
     /**
@@ -192,6 +196,16 @@ class Message
     public function setReceiverEmail($receiverEmail)
     {
         $this->receiverEmail = $receiverEmail;
+
+        return $this;
+    }
+    /**
+     * @param string $receiverName
+     * @return Message
+     */
+    public function setReceiverName($receiverName)
+    {
+        $this->receiverName = $receiverName;
 
         return $this;
     }// ----------------------------------------------------------------------------------------------------------------------------------

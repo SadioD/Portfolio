@@ -89,6 +89,12 @@ class LoadTechnology extends Fixture
                 'iconLabel'     => 'Symfony Web Image',
                 'seoFollow'     => false,
                 'redirectUrl'   => '#'
+            ],
+            [
+                'iconUrl'       => 'http://placehold.it/170X110',
+                'iconLabel'     => 'Ionic Web Image',
+                'seoFollow'     => false,
+                'redirectUrl'   => '#'
             ]
         ];
         

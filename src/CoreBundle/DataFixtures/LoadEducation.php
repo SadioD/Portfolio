@@ -39,7 +39,7 @@ class LoadEducation extends Fixture
             [
                 'graduationYear'  => '2010',
                 'country'         => 'Paris',
-                'degree'          => 'Diploma In Trafic Management',
+                'degree'          => 'Diploma In Trafic Manageme',
                 'shortDesc'       => 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.',
                 'firstHtmlClass'  => 'col-lg-6 col-md-6 col-sm-12 col-xs-12'   ,
                 'secondHtmlClass' => 'prt_about_learnbox_left'

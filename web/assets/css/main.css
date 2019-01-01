@@ -6,8 +6,22 @@
     color: green;
 }
 
+/* CoreBundle - Footer */
+#adminName {
+    color: rgb(243, 60, 32);
+    cursor: pointer;
+}
 
-/* Page Strenght - Technology - Slider */
+/* CoreBundle - Home Page (Index) */
+#languageBox {
+    background: red;
+    position: relative;
+    top: -140%;
+    right: -90%;
+    width: 60px;
+}
+
+/* CoreBundle - Page Strenght - Technology - Slider */
 .htmlColor:hover {
     color: rgb(221, 75, 37);
 }
@@ -33,7 +47,7 @@
     color: #c82663;
 }
 
-/* Page Login */
+/* AuthBundle - Page Login */
 .formContainer {
     background:rgb(27, 26, 26);
     border-color: rgba(223, 54, 12, 0.129);
@@ -59,7 +73,7 @@
     color: white;
 }
 
-/* Page profile */
+/* AuthBundle - Page profile */
 #messagesBox {
     margin-top: 6%;
     background: rgba(202, 55, 44, 0.279);
@@ -71,12 +85,23 @@
     font-size: 130%;
 }
 
-/* Page reply */
+/* AuthBundle - Page reply */
 #replyDiv {
     margin-top: 5%;
 }
 
-/* AuthBundle Layout */
+/* AuthBundle - Layout */
 .menuLinks {
     color: rgba(181, 102, 99, 0.83);
+}
+
+
+/* Targeting Only Mobile  */
+@media (max-width:415px) { 
+    
+/* CoreBundle - Home Page (Index) */
+    #languageBox {
+        background: yellow;
+        right: -80%;
+    }
 }

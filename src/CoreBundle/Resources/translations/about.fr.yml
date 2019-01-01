@@ -1,0 +1,42 @@
+# Partie - ABOUT ME
+profile:
+    title:      	Mon Profil
+    subtitle:   	Qui suis je
+    shortDesc:  	>           # Max 686 caractères
+                	Il existe de nombreuses variantes de passages de Lorem Ipsum, mais la plupart ont déjà
+                  souffert d'altération sous une forme quelconque, par humour injecté, ou des mots aléatoires qui ne
+                  semble même légèrement crédible. Si vous allez utiliser un passage de Lorem Ipsum, vous
+                  Il faut être sûr qu'il n'y a rien d'embarrassant caché au milieu du texte. Tous les
+                  Les générateurs Lorem Ipsum sur Internet ont tendance à répéter les blocs prédéfinis selon les besoins,
+                  ce qui en fait le premier véritable générateur sur Internet. Il utilise un dictionnaire de plus de 200
+                  Mots latins, combinés avec une poignée de structures de phrases modèles.
+    buttons:
+        resume:   Voir Mon CV
+        hireMe:   Me recruter
+        
+# Partie - EDUCATION
+education:
+    title:      	Formation
+    subtitle:   	Diplômes
+        
+# Partie - EXPERIENCE
+experience:
+    title:      	Experience
+    subtitle:     Professionnelle
+
+# Partie - Hobbies
+hobbies:
+    title:      	Hobbies
+    subtitle:   	Ce Que j'aime
+    shortDesc:  	>             # Max 387 caractères
+                	Il existe de nombreuses variantes de passages de Lorem Ipsum, mais la plupart ont déjà
+                  souffert d'altération sous une forme quelconque, par humour injecté, ou des mots aléatoires qui ne
+                  semble même légèrement crédible. Si vous allez utiliser un passage de Lorem Ipsum, vous
+                  Il faut être sûr qu'il n'y a rien d'embarrassant caché au milieu du texte.
+    icons:
+        plane:    Voyager
+        gamepad:  Jeux Video
+        swimmer:  Nager
+        book:     Lire
+        jogger:   Courir
+        music:    Musique

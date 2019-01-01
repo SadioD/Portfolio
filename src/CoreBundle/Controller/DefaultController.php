@@ -24,7 +24,7 @@ class DefaultController extends Controller
         if($request->isMethod('POST')) 
         {
             if ($form->handleRequest($request)->isValid()) {
-                $this->saveForm($message);
+                return $this->saveForm($message);
             } else {
                 $this->addFlash('redFlash', 'Oops... Your Message could not be sent. Please try again');
             }
@@ -45,6 +45,10 @@ class DefaultController extends Controller
         $this->getDoctrine()->getManager()->flush();
         
         $this->addFlash('greenFlash', 'Your Message has been delivered.');
-        //return $this->redirectToRoute('core_homepage');
+        return $this->redirectToRoute('core_homepage');
     }// -----------------------------------------------------------------------------------------------------------------------------
+
+    public function testAction() {
+        return $this->render('@Core/Default/test.html.twig');
+    }
 }

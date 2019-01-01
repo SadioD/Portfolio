@@ -1,0 +1,26 @@
+# Partie - WHAT I DO
+whatIdo:
+    title:      	Domaines
+    subtitle:   	Compétences
+
+# Partie - DASHBOARD
+dashboard:
+    kpis:
+        first:    Technologies Web
+        second:   Projets Réalisés
+        third:    Diplômes obtenus
+
+# Partie - SKILLS
+skills:
+    title:      	Indicateurs
+    subtitle:   	Performance
+    fields:
+        first:    Photoshop
+        second:   Illustrator
+        third:    Html & Css
+        fourth:   WordPress
+
+# Partie - Technology
+technology:
+    title:      	Technologies
+    subtitle:   	Maitrisées

@@ -18,7 +18,7 @@
             {% for message in messages %}
             <div class="row">
                 <div class="col-xs-2 col-sm-3">
-                    <p>{{ message.receiverEmail }}</p>
+                    <p>{{ message.receiverName }}</p>
                 </div>
                 <div class="col-xs-4 col-sm-5">
                     <a href="{{ path('sadio_auth_security_view', {'id': message.id}) }}" class="viewLink">

@@ -1,0 +1,26 @@
+# Partie - WHAT I DO
+whatIdo:
+    title:      	What I do
+    subtitle:   	take a look
+
+# Partie - DASHBOARD
+dashboard:
+    kpis:
+        first:    Web Technologies
+        second:   Achieved Projects
+        third:    Degrees
+
+# Partie - SKILLS
+skills:
+    title:      	My Skills
+    subtitle:   	Expert in
+    fields:
+        first:    Photoshop
+        second:   Illustrator
+        third:    Html & Css
+        fourth:   WordPress
+
+# Partie - Technology
+technology:
+    title:      	Technology
+    subtitle:   	Worked With

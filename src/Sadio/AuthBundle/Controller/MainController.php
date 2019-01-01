@@ -55,6 +55,7 @@ class MainController extends Controller
         }
         // On change le statut de l'ancien message
         $message->setStatus('OLD');
+        $this->getDoctrine()->getManager()->flush();
 
         return $this->render('@SadioAuth/Main/view.html.twig', ['message' => $message]);
     }// -------------------------------------------------------------------------------------------------------------------------
@@ -75,9 +76,10 @@ class MainController extends Controller
         {
             // On crée la réponse
             $response = new Message();
-            $response->setAuthorName('Sadio DIALLO');
-            $response->setReceiverEmail($message->getAuthorEmail());
+            $response->setAuthorName($this->container->getParameter('admin_name'));
             $response->setAuthorEmail($this->container->getParameter('mailer_user'));
+            $response->setReceiverEmail($message->getAuthorEmail());
+            $response->setReceiverName($message->getAuthorName());
             $response->setSubject($request->request->get('subject'));
             $response->setContent($request->request->get('content'));
 
