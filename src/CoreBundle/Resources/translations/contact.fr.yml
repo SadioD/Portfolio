@@ -1,0 +1,18 @@
+# Partie - Form
+form:
+    title:      	    Coordonnées
+    subtitle:   	    Me Rencontrer
+    main_label:       Prendre Rendez Vous ?
+    submit_button:    Envoyer
+
+# Partie - Coordonnées
+contact:
+    phone:
+        title:        Téléphone
+        value:        +337-58-17-61-11
+    email:
+        title:        Email
+        value:        contact.sadio.diallo@gmail.com
+    address:
+        title:        Adresse
+        value:        16 Rue de la Liberté, Saint-Etienne

@@ -47,8 +47,4 @@ class DefaultController extends Controller
         $this->addFlash('greenFlash', 'Your Message has been delivered.');
         return $this->redirectToRoute('core_homepage');
     }// -----------------------------------------------------------------------------------------------------------------------------
-
-    public function testAction() {
-        return $this->render('@Core/Default/test.html.twig');
-    }
 }

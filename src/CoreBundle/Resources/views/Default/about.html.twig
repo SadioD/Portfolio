@@ -18,16 +18,16 @@
                             <p>{{ 'profile.subtitle'|trans({}, 'about') }}</p>
                         </div>
                     </div>
-                    <div class="prt_about_details" itemscope itemtype="http://schema.org/Person">
-                        <p itemprop="knowsAbout">
+                    <div class="prt_about_details">
+                        <p itemscope itemtype="http://schema.org/Person" itemprop="knowsAbout">
                             {% trans from 'about' %}
                                 profile.shortDesc
                             {% endtrans %}
                         </p>
-                        <a href="#" class="prt_btn">
+                        <a href="#" class="prt_btn" itemscope itemtype="http://schema.org/DownloadAction" itemprop="fromLocation">
                             {{ 'profile.buttons.resume'|trans({}, 'about') }}
                         </a> 
-                        <a href="#" id="hireButton" class="prt_btn">
+                        <a href="#" id="hireButton" class="prt_btn" itemscope itemtype="http://schema.org/WriteAction" itemprop="url">
                             {{ 'profile.buttons.hireMe'|trans({}, 'about') }}
                         </a>
                     </div>

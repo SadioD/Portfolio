@@ -14,9 +14,9 @@ _main:
     resource: routing.yml
 
 # Route de test pour la traduction de langue
-oc_platform_translation:
-  path:     /{_locale}/translation
-  defaults:
-    _controller: CoreBundle:Default:test
-  requirements:
-        _locale: en|fr
+#platform_translation:
+#  path:     /{_locale}/translation
+#  defaults:
+#    _controller: CoreBundle:Default:test
+#  requirements:
+#       _locale: en|fr

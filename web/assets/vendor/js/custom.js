@@ -26,7 +26,7 @@ Assigned to: ThemeForest
         }
     });
 	
-	// for counter 
+	// for counter - About Page, Nombre de projets réalisés, etc.
 	$('.timer').appear(function() {
 		$(this).countTo();
 	});

@@ -7,8 +7,8 @@
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="prt_heading_wrapper">
                     <div class="prt_heading">
-                        <h1>portfolio</h1>
-                        <p>MY work</p>
+                        <h1>{{ 'portfolio.title'|trans({}, 'portfolio') }}</h1>
+                        <p>{{ 'portfolio.subtitle'|trans({}, 'portfolio') }}</p>
                     </div>
                 </div>
             </div>
@@ -31,7 +31,9 @@
                 {# Bouton Load More #}
                 {% if projectList|length > 6 %}
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
-                        <button class="prt_btn" id="loadMore">load more</button>
+                        <button class="prt_btn" id="loadMore" itemscope itemtype="http://schema.org/ViewAction" itemprop="url">
+                            {{ 'portfolio.button'|trans({}, 'portfolio') }}
+                        </button>
                     </div>
                 {% endif %}
             </div>

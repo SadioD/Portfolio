@@ -7,47 +7,51 @@
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="prt_heading_wrapper">
                     <div class="prt_heading">
-                        <h1>get in touch</h1>
-                        <p>contact us</p>
+                        <h1>{{ 'form.title'|trans({}, 'contact') }}</h1>
+                        <p>{{ 'form.subtitle'|trans({}, 'contact') }}</p>
                     </div>
                 </div>
             </div>
             <div class="prt_contact_box">
+                {#-------------------------------- Form ----------------------------------------#}
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <div class="prt_contact_info">
-                        <h1>How I can help you ?</h1>
+                        <h1>{{ 'form.main_label'|trans({}, 'contact') }}</h1>
                         <div class="prt_contact_form">
                             <div class="row">
-                                {#-------------------------------- Form ----------------------------------------#}
                                 {% include "@Core/Default/form.html.twig" %}
                             </div>
                         </div>
                     </div>
                 </div>
+                {#-------------------------------- Google Maps ----------------------------------------#}
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <div class="prt_contact_map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3325.7149899484166!2d-92.46035748446522!3d33.534795052266986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x862d89d84d550aef%3A0xc554ea1ecff51963!2s368+7th+%237%2C+Hampton%2C+AR+71744%2C+USA!5e0!3m2!1sen!2sin!4v1506497917270"
-                            allowfullscreen></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.9855759235265!2d4.4014037502581385!3d45.44994677899809!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f5abfa7903fbb9%3A0xb8e088958c58a7a!2s16+Rue+de+la+Libert%C3%A9%2C+42000+Saint-%C3%89tienne%2C+France!5e0!3m2!1sen!2sin!4v1546397578351" allowfullscreen>
+                        </iframe>
                     </div>
                 </div>
             </div>
-            <div class="prt_contact_details">
+            {#-------------------------------- Coordonnées ----------------------------------------#}
+            <div class="prt_contact_details" itemscope itemtype="http://schema.org/Person">
                 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                    <div class="prt_contact_details_box details_box1">
-                        <h4>Phone</h4>
-                        <p>+1-202-555-0125<br>01-202-555-0125</p>
+                    <div class="prt_contact_details_box details_box1" itemprop="telephone">
+                        <h4>{{ 'contact.phone.title'|trans({}, 'contact') }}</h4>
+                        <p>{{ 'contact.phone.value'|trans({}, 'contact') }}</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                    <div class="prt_contact_details_box details_box2">
-                        <h4>Email</h4>
-                        <p><a href="#">name@yourmail.com</a><br><a href="#">mail@yourname.com</a></p>
+                    <div class="prt_contact_details_box details_box2" itemprop="email">
+                        <h4>{{ 'contact.email.title'|trans({}, 'contact') }}</h4>
+                        <p>
+                            {{ 'contact.email.value'|trans({}, 'contact') }}
+                        </p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                    <div class="prt_contact_details_box details_box3">
-                        <h4>Address</h4>
-                        <p>71 Pilgrim Avenue<br>Chevy Chase, MD 20815</p>
+                    <div class="prt_contact_details_box details_box3" itemprop="address">
+                        <h4>{{ 'contact.address.title'|trans({}, 'contact') }}</h4>
+                        <p>{{ 'contact.address.value'|trans({}, 'contact') }}</p>
                     </div>
                 </div>
             </div>

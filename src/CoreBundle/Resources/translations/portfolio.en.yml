@@ -1,0 +1,20 @@
+portfolio:
+    title:      	                                               portfolio
+    subtitle:   	                                               MY work
+    button:                                                      load more
+
+# Partie - Images des Projets - Text sortant de la BDD
+A School Management Platform:                                    A School Management Platform
+Farming and AgriFood Website:                                    Farming and AgriFood Website
+Guinea Civil Society Platform:                                   Guinea Civil Society Platform
+This game is NOT compatible with Smartphones:                    This game is NOT compatible with Smartphones
+Responsive Platform:                                             Responsive Platform
+Responsive Blog:                                                 Responsive Blog
+2D Racing Game (Computer required):                              2D Racing Game (Computer required)
+Responsive Chatroom:                                             Responsive Chatroom
+'Frameworks/Libraries : Symfony 3, Bootstrap 4':                'Frameworks/Libraries : Symfony 3, Bootstrap 4'
+'Frameworks/Libraries : CodeIgniter 3, Bootstrap 4, jQuery':    'Frameworks/Libraries : CodeIgniter 3, Bootstrap 4, jQuery'
+'Frameworks/Libraries : Angular 6, CodeIgniter 3, jQuery':      'Frameworks/Libraries : Angular 6, CodeIgniter 3, jQuery'
+'Frameworks/Libraries : CodeIgniter 3, jQuery and UI':          'Frameworks/Libraries : CodeIgniter 3, jQuery and UI'
+'Frameworks/Libraries : Symfony and Bootstrap':                 'Frameworks/Libraries : Symfony and Bootstrap'
+'CMS : WordPress':                                              'CMS : WordPress'

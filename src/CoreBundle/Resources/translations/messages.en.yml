@@ -1,6 +1,9 @@
-# Page test
-'Symfony is great': 'Symfony is great'
-'You see, I always knew that I''d come back. Because I never liked it there': 'You see, I always knew that I''d come back. Because I never liked it there'
+# Menu Principal
+nav:
+    about:      about
+    portfolio:  portfolio
+    contact:    contact
+    strength:   strength
 
 # Contact Form
 Your Name: Your Name 

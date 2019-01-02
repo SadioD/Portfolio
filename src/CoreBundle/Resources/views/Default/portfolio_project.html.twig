@@ -1,10 +1,10 @@
-<a href="{{ project.url }}" title="{{ project.titleInfo }}" target="_blank">
+<a href="{{ project.url }}" title="{{ project.titleInfo|trans({}, 'portfolio') }}" target="_blank">
     <div class="prt_portfolio_img">
         <img src="{{ project.image.url }}" alt="{{ project.image.alt }}">
         <div class="prt_portfolio_text">
             <h4>{{ project.name }}</h4>
-            <p>
-                {{ project.shortDesc }}
+            <p itemscope itemtype="http://schema.org/Article" itemprop="name">
+                {{ project.shortDesc|trans({}, 'portfolio') }}
                 {% if project.responsive %}
                 <span style="float:right">
                     <i class="fab fa-firefox"></i>

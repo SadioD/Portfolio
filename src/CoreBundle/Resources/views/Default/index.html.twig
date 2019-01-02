@@ -21,10 +21,18 @@
                 {#---------------------------- Menu ---------------------------------------------------#}
                 <div class="prt_menu_wrapper">
                     <nav>
-                        <a href="#about" class="prt_top">about</a>
-                        <a href="#contact" class="prt_right" id="contactLink">contact</a>
-                        <a href="#services" class="prt_bottom">strength</a>
-                        <a href="#portfolio" class="prt_left">portfolio</a>
+                        <a href="#about" class="prt_top">
+                            {{ 'nav.about'|trans({}, 'messages') }}
+                        </a>
+                        <a href="#contact" class="prt_right" id="contactLink">
+                            {{ 'nav.contact'|trans({}, 'messages') }}
+                        </a>
+                        <a href="#services" class="prt_bottom">
+                            {{ 'nav.strength'|trans({}, 'messages') }}
+                        </a>
+                        <a href="#portfolio" class="prt_left">
+                            {{ 'nav.portfolio'|trans({}, 'messages') }}
+                        </a>
                     </nav>
                 </div>
                 <div class="container">
