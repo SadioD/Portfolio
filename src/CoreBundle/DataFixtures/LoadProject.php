@@ -12,7 +12,7 @@ class LoadProject extends Fixture
     public function load(ObjectManager $manager) 
     {
         // Lets create a list of Project
-        $list = [
+        /*$list = [
             [
                 'url'        => 'url/test_a.com',
                 'name'       => 'Symfony',
@@ -123,6 +123,6 @@ class LoadProject extends Fixture
             $project->setImage($image);
             $manager->persist($project);
         }
-        $manager->flush();
+        $manager->flush();*/
     }
 }

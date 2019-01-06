@@ -120,7 +120,8 @@
                                             <a href="{{ technology.redirectUrl }}"><i class="{{ technology.iconUrl }}" aria-hidden="true"></i></a><br />
                                             <p>{{ technology.iconLabel }}</p>
                                         {% else %}
-                                            <img src="{{ technology.iconUrl }}" alt="{{ technology.iconLabel }}" />
+                                            <img src="{{ asset('assets/images/' ~ technology.iconUrl)}}" alt="{{ technology.iconLabel }}" /><br/>
+                                            <p>{{ technology.redirectUrl }}</p>
                                         {% endif %}
                                     </div>
                                 {% endfor %}

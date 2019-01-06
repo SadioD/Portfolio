@@ -12,7 +12,7 @@ class LoadSkills extends Fixture
     public function load(ObjectManager $manager) 
     {
         // Lets create a list of Skills
-        $list = [
+        /*$list = [
             [
                 
                 'name'       => 'Website Design',
@@ -71,6 +71,6 @@ class LoadSkills extends Fixture
             $skills->setImage($image);
             $manager->persist($skills);
         }
-        $manager->flush();
+        $manager->flush();*/
     }
 }

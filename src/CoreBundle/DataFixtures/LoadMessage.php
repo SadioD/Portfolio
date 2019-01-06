@@ -11,7 +11,7 @@ class LoadMessage extends Fixture
     public function load(ObjectManager $manager) 
     {
         // Lets create a list of Message
-        $list = [
+        /*$list = [
             [
                 'authorName'  => 'Grasset',
                 'authorEmail' => 'grasset@gmail.com',
@@ -37,6 +37,6 @@ class LoadMessage extends Fixture
             $message = new Message($list[$i]);
             $manager->persist($message);
         }
-        $manager->flush();
+        $manager->flush();*/
     }
 }

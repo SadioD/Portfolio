@@ -11,7 +11,7 @@ class LoadExperience extends Fixture
     public function load(ObjectManager $manager) 
     {
         // Lets create a list of Experience
-        $list = [
+        /*$list = [
             [
                 'startingYear'  => '2012',
                 'startingMonth' => 'July',
@@ -51,6 +51,6 @@ class LoadExperience extends Fixture
             $experience = new Experience($list[$i]);
             $manager->persist($experience);
         }
-        $manager->flush();
+        $manager->flush();*/
     }
 }

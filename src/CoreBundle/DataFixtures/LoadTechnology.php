@@ -12,7 +12,7 @@ class LoadTechnology extends Fixture
     {
         // Lets create a list of Technology
         $list = [
-            [
+            /*[
                 'iconUrl'       => 'fa fa-github fa-4x githubColor',
                 'iconLabel'     => 'Github',
                 'seoFollow'     => true,
@@ -24,12 +24,6 @@ class LoadTechnology extends Fixture
                 'seoFollow'     => true,
                 'redirectUrl'   => 'https://fr.wikipedia.org/wiki/HTML5'
             ],
-            /*[
-                'iconUrl'       => 'fa fa-code',
-                'iconLabel'     => 'HTML5',
-                'seoFollow'     => true
-                'redirectUrl'   => ''
-            ],*/
             [
                 'iconUrl'       => 'fa fa-css3 fa-4x cssColor',
                 'iconLabel'     => 'CSS',
@@ -55,16 +49,16 @@ class LoadTechnology extends Fixture
                 'redirectUrl'   => 'https://developer.mozilla.org/fr/docs/Web/JavaScript'
             ],
             [
-                'iconUrl'       => 'http://placehold.it/170X110',
+                'iconUrl'       => 'codeIgniter.png',
                 'iconLabel'     => 'Codeigniter Web Image',
                 'seoFollow'     => false,
-                'redirectUrl'   => '#'
+                'redirectUrl'   => 'CodeIgniter'
             ],
             [
                 'iconUrl'       => 'fa fa-wordpress fa-4x githubColor',
                 'iconLabel'     => 'WordPress',
                 'seoFollow'     => true,
-                'redirectUrl'   => 'https://angular.io/'
+                'redirectUrl'   => 'https://fr.wordpress.org/'
             ],
             [
                 'iconUrl'       => 'fab fa-php fa-4x phpColor',
@@ -85,16 +79,16 @@ class LoadTechnology extends Fixture
                 'redirectUrl'   => '#'
             ],
             [
-                'iconUrl'       => 'http://placehold.it/170X110',
+                'iconUrl'       => 'symfony.png',
                 'iconLabel'     => 'Symfony Web Image',
                 'seoFollow'     => false,
-                'redirectUrl'   => '#'
-            ],
+                'redirectUrl'   => 'Symfony'
+            ],*/
             [
-                'iconUrl'       => 'http://placehold.it/170X110',
+                'iconUrl'       => 'ionic.png',
                 'iconLabel'     => 'Ionic Web Image',
                 'seoFollow'     => false,
-                'redirectUrl'   => '#'
+                'redirectUrl'   => 'Ionic'
             ]
         ];
         

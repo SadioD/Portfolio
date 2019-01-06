@@ -11,7 +11,7 @@ class LoadEducation extends Fixture
     public function load(ObjectManager $manager) 
     {
         // Lets create a list of Education
-        $list = [
+        /*$list = [
             [
                 'graduationYear'  => '2004',
                 'country'         => 'Morocco',
@@ -51,6 +51,6 @@ class LoadEducation extends Fixture
             $education = new Education($list[$i]);
             $manager->persist($education);
         }
-        $manager->flush();
+        $manager->flush();*/
     }
 }
