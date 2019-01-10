@@ -27,7 +27,7 @@
                         <div class="prt_services_slider_box">
                             {% for skills in skillsList %}
                                 <div class="{{ skills.htmlClass }}" id="{{ skills.htmlID }}" itemscope itemtype="http://schema.org/Person">
-                                    <img src="http://placehold.it/86X100" alt="Service icon">
+                                    <img src="{{ asset('assets/images/' ~ skills.image.url) }}" alt="{{ skills.image.alt }}">
                                     <h4 itemprop="knowsAbout">{{ skills.name }}</h4>
                                     <p>{{ skills.shortDesc }}</p>
                                 </div>

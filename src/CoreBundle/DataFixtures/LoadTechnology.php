@@ -73,12 +73,6 @@ class LoadTechnology extends Fixture
                 'redirectUrl'   => 'https://angular.io/'
             ],
             [
-                'iconUrl'       => 'http://placehold.it/170X110',
-                'iconLabel'     => 'Assetic Web Image',
-                'seoFollow'     => false,
-                'redirectUrl'   => '#'
-            ],
-            [
                 'iconUrl'       => 'symfony.png',
                 'iconLabel'     => 'Symfony Web Image',
                 'seoFollow'     => false,

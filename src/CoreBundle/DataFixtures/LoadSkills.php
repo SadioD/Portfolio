@@ -15,50 +15,50 @@ class LoadSkills extends Fixture
         /*$list = [
             [
                 
-                'name'       => 'Website Design',
+                'name'       => 'Web Development',
                 'shortDesc'  => 'It is a long established fact that a reader will be distracted It is a long established fact that a reader will be distracted',
                 'htmlID'     =>  '1',
                 'htmlClass'  => 'prt_services_slider_text prt_img_click active',
             ],
             [
                 
-                'name'       => 'Graphic Design',
+                'name'       => 'SEO Specialist',
                 'shortDesc'  => 'It is a long established fact that a reader will be distracted It is a long established fact that a reader will be distracted',
                 'htmlID'     =>  '2',
                 'htmlClass'  => 'prt_services_slider_text prt_img_click',
             ],
             [
                 
-                'name'       => 'Logo Design',
-                'shortDesc'  => 'It is a long established fact that a reader will be distracted It is a long established fact that a reader will be distracted',
+                'name'       => 'Mobile Development',
+                'shortDesc'  => 'Cross-Platform mobile app development',
                 'htmlID'     =>  '3',
                 'htmlClass'  => 'prt_services_slider_text prt_img_click',
             ],
             [
                 
-                'name'       => 'Web Development',
+                'name'       => 'Web Marketing',
                 'shortDesc'  => 'It is a long established fact that a reader will be distracted It is a long established fact that a reader will be distracted',
                 'htmlID'     =>  '4',
                 'htmlClass'  => 'prt_services_slider_text prt_img_click',
-            ]
+            ]            
         ];
 
         $imageList = [
             [
-                'alt' => 'Service icon',
-                'url' => 'http://placehold.it/86X100'
+                'alt' => 'Web Dev Image',
+                'url' => 'web_dev_logo.png'
             ],
             [
-                'alt' => 'Service icon',
-                'url' => 'http://placehold.it/86X100'
+                'alt' => 'SEO Image',
+                'url' => 'seo_logo.png'
             ],
             [
-                'alt' => 'Service icon',
-                'url' => 'http://placehold.it/86X100'
+                'alt' => 'Mobile Image',
+                'url' => 'mobile_app_logo.png'
             ],
             [
-                'alt' => 'Service icon',
-                'url' => 'http://placehold.it/86X100'
+                'alt' => 'WebMarketing Image',
+                'url' => 'web_mktg_logo.png'
             ]
         ];
 

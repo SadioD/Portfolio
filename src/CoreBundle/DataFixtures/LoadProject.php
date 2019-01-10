@@ -81,36 +81,36 @@ class LoadProject extends Fixture
 
         $imageList = [
             [
-                'alt' => 'Symfony Project Image',
-                'url' => 'http://placehold.it/370X370'
+                'alt' => 'Symfony JobSearch Image',
+                'url' => 'jobsearch.png'
             ],
             [
-                'alt' => 'CodeIgniter Project Image',
-                'url' => 'http://placehold.it/370X370'
+                'alt' => 'CodeIgniter Blog Image',
+                'url' => 'cod_blog.png'
             ],
             [
-                'alt' => 'Jquery Project Image',
-                'url' => 'http://placehold.it/370X460'
+                'alt' => 'Racing Game Image',
+                'url' => 'racing_game.png'
             ],
             [
                 'alt' => 'Angular Project Image',
-                'url' => 'http://placehold.it/370X280'
+                'url' => 'angular.png'
             ],
             [
-                'alt' => 'Jquery Project Image',
-                'url' => 'http://placehold.it/370X280'
+                'alt' => 'Chatroom Project Image',
+                'url' => 'cod_chatroom.png'
             ],
             [
-                'alt' => 'test IDI-1',
-                'url' => 'http://placehold.it/370X460'
+                'alt' => 'Image Mahatma Gandhi',
+                'url' => 'lycee_gandhi.png'
             ],
             [
-                'alt' => 'test IDI-2',
-                'url' => 'http://placehold.it/370X370'
+                'alt' => 'Image Afdal Group',
+                'url' => 'afdal.png'
             ],
             [
-                'alt' => 'test IDI-3',
-                'url' => 'http://placehold.it/370X370'
+                'alt' => 'Image Société Civile',
+                'url' => 'societe_civile.png'
             ]
         ];
 
