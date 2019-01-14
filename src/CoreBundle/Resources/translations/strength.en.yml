@@ -12,13 +12,13 @@ dashboard:
 
 # Partie - SKILLS
 skills:
-    title:      	My Skills
+    title:      	Additional Skills
     subtitle:   	Expert in
     fields:
-        first:    Photoshop
-        second:   Illustrator
-        third:    Html & Css
-        fourth:   WordPress
+        first:    Project Management
+        second:   Graphic Design
+        third:    Business Planning
+        fourth:   Strategic Marketing
 
 # Partie - Technology
 technology:

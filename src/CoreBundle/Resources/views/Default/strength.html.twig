@@ -17,10 +17,10 @@
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                         <div class="prt_services_slider_imgs">
-                            <img class="img_1 active" src="http://placehold.it/470X390" alt="Service">
-                            <img class="img_2" src="http://placehold.it/470X390" alt="Service">
-                            <img class="img_3" src="http://placehold.it/470X390" alt="Service">
-                            <img class="img_4" src="http://placehold.it/470X390" alt="Service">
+                            <img class="img_1 active" src="{{ asset('assets/images/what_i_do.png') }}" alt="What I do Image">
+                            <img class="img_2" src="{{ asset('assets/images/first.png') }}" alt="What I do Image">
+                            <img class="img_3" src="{{ asset('assets/images/second.png') }}" alt="What I do Image">
+                            <img class="img_4" src="{{ asset('assets/images/third.png') }}" alt="What I do Image">
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
@@ -28,8 +28,8 @@
                             {% for skills in skillsList %}
                                 <div class="{{ skills.htmlClass }}" id="{{ skills.htmlID }}" itemscope itemtype="http://schema.org/Person">
                                     <img src="{{ asset('assets/images/' ~ skills.image.url) }}" alt="{{ skills.image.alt }}">
-                                    <h4 itemprop="knowsAbout">{{ skills.name }}</h4>
-                                    <p>{{ skills.shortDesc }}</p>
+                                    <h4 itemprop="knowsAbout">{{ skills.name|trans }}</h4>
+                                    <p>{{ skills.shortDesc|trans }}</p>
                                 </div>
                             {% endfor %}
                         </div>
@@ -41,31 +41,34 @@
         <div class="prt_couter_wrapper prt_toppadder80 prt_bottompadder50">
             <div class="container">
                 <div class="row">
+                    {# Nombre de technos maitrisées = celles figurant sur le CV #}
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                         <div class="prt_counter_box">
-                            <img src="http://placehold.it/100X100" alt="Clients">
-                            <h3 class="timer" data-from="0" data-to="12" data-speed="5000"></h3>
+                            <img src="{{ asset('assets/images/technology_icon.png') }}" alt="Clients">
+                            <h3 class="timer" data-from="0" data-to="23" data-speed="5000"></h3>
                             <p>{{ 'dashboard.kpis.first'|trans({}, 'strength') }}</p>
                         </div>
                     </div>
+                    {# Nombre de projets réalisés = 8 BDD (sites web) + 7 (offline installés en local) #}
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                         <div class="prt_counter_box">
-                            <img src="http://placehold.it/100X100" alt="Projects">
+                            <img src="{{ asset('assets/images/achieved_icon.png') }}" alt="Projects">
                             <h3 class="timer" data-from="0" data-to="11" data-speed="5000"></h3>
                             <p>{{ 'dashboard.kpis.second'|trans({}, 'strength') }}</p>
                         </div>
                     </div>
+                    {# Nombre de diplomes obtenus = Bac, Licence, Ingenierie Commerciale, Web Marketing #}
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                         <div class="prt_counter_box">
-                            <img src="http://placehold.it/100X100" alt="Awards">
-                            <h3 class="timer" data-from="0" data-to="3" data-speed="5000"></h3>
+                            <img src="{{ asset('assets/images/degree_icon.png') }}" alt="Awards">
+                            <h3 class="timer" data-from="0" data-to="4" data-speed="5000"></h3>
                             <p>{{ 'dashboard.kpis.third'|trans({}, 'strength') }}</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        {#----------------------------- SKILLS (Domaines d'expertise: SEO, etc.) -----------------------------#}
+        {#----------------------------- SKILLS (Domaines d'expertise: Graphic Design, etc.) ---------------------------#}
         <div class="prt_skills_wrapper prt_toppadder115 prt_bottompadder115" style="display: block; bottom: 0px; top: 0px;">
             <div class="container">
                 <div class="row">

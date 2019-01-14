@@ -16,28 +16,28 @@ class LoadSkills extends Fixture
             [
                 
                 'name'       => 'Web Development',
-                'shortDesc'  => 'It is a long established fact that a reader will be distracted It is a long established fact that a reader will be distracted',
+                'shortDesc'  => 'website building and maintenance',
                 'htmlID'     =>  '1',
                 'htmlClass'  => 'prt_services_slider_text prt_img_click active',
             ],
             [
                 
                 'name'       => 'SEO Specialist',
-                'shortDesc'  => 'It is a long established fact that a reader will be distracted It is a long established fact that a reader will be distracted',
+                'shortDesc'  => 'website optimization, Search Engine rankings improvement',
                 'htmlID'     =>  '2',
                 'htmlClass'  => 'prt_services_slider_text prt_img_click',
             ],
             [
                 
                 'name'       => 'Mobile Development',
-                'shortDesc'  => 'Cross-Platform mobile app development',
+                'shortDesc'  => 'cross-patform mobile app development',
                 'htmlID'     =>  '3',
                 'htmlClass'  => 'prt_services_slider_text prt_img_click',
             ],
             [
                 
                 'name'       => 'Web Marketing',
-                'shortDesc'  => 'It is a long established fact that a reader will be distracted It is a long established fact that a reader will be distracted',
+                'shortDesc'  => 'online promotion, traffic management',
                 'htmlID'     =>  '4',
                 'htmlClass'  => 'prt_services_slider_text prt_img_click',
             ]            

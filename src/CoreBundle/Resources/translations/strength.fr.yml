@@ -6,19 +6,19 @@ whatIdo:
 # Partie - DASHBOARD
 dashboard:
     kpis:
-        first:    Technologies Web
-        second:   Projets Réalisés
+        first:    Technologies web
+        second:   Projets réalisés
         third:    Diplômes obtenus
 
 # Partie - SKILLS
 skills:
-    title:      	Indicateurs
+    title:      	Autres Compétences
     subtitle:   	Performance
     fields:
-        first:    Photoshop
-        second:   Illustrator
-        third:    Html & Css
-        fourth:   WordPress
+        first:    Gestion de Projets
+        second:   Infographie
+        third:    Business Planning
+        fourth:   Marketing Stratégique
 
 # Partie - Technology
 technology:

@@ -14,7 +14,7 @@
 
 /* CoreBundle - Home Page (Index) */
 #languageBox {
-    background: red;
+    /*background: red;*/
     position: relative;
     top: -140%;
     right: -90%;
@@ -96,12 +96,47 @@
 }
 
 
-/* Targeting Only Mobile  */
+/* Targeting Only Mobile Portrait  */
 @media (max-width:415px) { 
     
 /* CoreBundle - Home Page (Index) */
     #languageBox {
-        background: yellow;
-        right: -80%;
+        /*background: yellow;*/
+        position: relative;
+        top: -70%; /*-140%*/
+        width: 60px;
+        right: -80%; /*-80%*/
+    }
+
+    .prt_home_wrapper h1 {
+        margin-left: 14%;
+        /*background: red;*/
+        background-image:url(../images/menu_responsive.png);
+        -webkit-background-clip: text;
+	    -webkit-text-fill-color: transparent;
+        background-size: cover;
+        background-position: -41px -85px;
+    }
+}
+
+/* Targeting Only Mobile Landscape  */
+@media (min-width:420px) and (max-width:740px) {
+
+/* CoreBundle - Home Page (Index) */
+    .prt_home_wrapper h1 {
+        margin-left: 14%;
+        background: rgb(231, 125, 125);
+        -webkit-background-clip: text;
+	    -webkit-text-fill-color: transparent;
+        background-size: cover;
+        background-position: -41px -85px;
+    }
+
+    #languageBox {
+        /*background: yellow;*/
+        position: absolute;
+        top: 5%; /*-140%*/
+        width: 60px;
+        right: 5%; /*-80%*/
     }
 }

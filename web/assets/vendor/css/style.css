@@ -256,7 +256,7 @@ input:focus, textarea:focus, select:focus, button:focus {
 	background-color: #000000;
 }
 .prt_home_wrapper{
-	background-image:url(../../images/menu_bis.png); /*http://placehold.it/1920X1080*/
+	background-image:url(../../images/menu_bis_2.png); /*http://placehold.it/1920X1080*/
 	background-position: center center;
 	background-repeat:no-repeat;
 	background-size:cover;
@@ -270,7 +270,10 @@ input:focus, textarea:focus, select:focus, button:focus {
 	font-size:150px;
 	color: #ffffff;
 	font-weight:bold;
-	background: url(http://placehold.it/650X800) no-repeat;
+    /*background: url(http://placehold.it/650X800) no-repeat;*/
+    background: rgba(204, 204, 204, 1);
+    /*background: rgb(231, 125, 125);*/
+    /*background-image:url(../../images/menu_responsive.png);*/
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
     background-size: cover;
@@ -900,18 +903,18 @@ input:focus, textarea:focus, select:focus, button:focus {
     -o-transition: all 0.3s;
     transition: all 0.3s;
 }
-.prt_contact_details_box.details_box1{
-    background-image:url(http://placehold.it/450X250);
+.prt_contact_details_box.details_box1, .prt_contact_details_box.details_box2, .prt_contact_details_box.details_box3 {
+    background-image:url(../../images/contact.png);
     /*background: rgb(57, 57, 57);*/
 }
-.prt_contact_details_box.details_box2{
+/*.prt_contact_details_box.details_box2{
     background-image:url(http://placehold.it/450X250);
-    /*background: rgb(57, 57, 57);*/
+    
 }
 .prt_contact_details_box.details_box3{
     background-image:url(http://placehold.it/450X250);
-    /*background: rgb(57, 57, 57);*/
-}
+    
+}*/
 /*---------- Services css Start -------*/
 .prt_services_wrapper{
     background-color: #010101;
@@ -1076,11 +1079,12 @@ input:focus, textarea:focus, select:focus, button:focus {
 .prt_couter_wrapper{
     display: inline-block;
     width: 100%;
-	background-image:url(http://placehold.it/1920X600);
+	/*background-image:url(http://placehold.it/1920X600);
 	background-position:center center;
 	background-repeat:no-repeat;
 	background-size:cover;
-	background-attachment:fixed;
+    background-attachment:fixed;*/
+    background: rgb(37, 37, 37);
     position: relative;
     z-index: 1;
 }
@@ -1137,32 +1141,36 @@ input:focus, textarea:focus, select:focus, button:focus {
 	text-align:center;
 }
 #circles-1{
-	background-image:url(http://placehold.it/200X200);
+	/*background-image:url(http://placehold.it/200X200);*/
 	border-radius: 100%;
-    background-position: center;
+    /*background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover;*/
+    background: rgb(22, 22, 22);
 }
 #circles-2{
-	background-image:url(http://placehold.it/200X200);
+	/*background-image:url(http://placehold.it/200X200);*/
 	border-radius: 100%;
-    background-position: center;
+    /*background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover;*/
+    background: rgb(22, 22, 22);
 }
 #circles-3{
-	background-image:url(http://placehold.it/200X200);
+	/*background-image:url(http://placehold.it/200X200);*/
 	border-radius: 100%;
-    background-position: center;
+    /*background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover;*/
+    background: rgb(22, 22, 22);
 }
 #circles-4{
-	background-image:url(http://placehold.it/200X200);
+	/*background-image:url(http://placehold.it/200X200);*/
 	border-radius: 100%;
-    background-position: center;
+    /*background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover;*/
+    background: rgb(22, 22, 22);
 }
 .circles-decimals {
 	font-size: .4em;
