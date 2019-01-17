@@ -6,6 +6,6 @@ sadio_auth:
 # Routes du CoreBundle
 core:
     resource: "@CoreBundle/Resources/config/routing.yml"
-    prefix:   /{_locale}
+    prefix:   /{_locale}/
     requirements:
-        _locale: en|fr
+        _locale: "|en|fr"

@@ -1,0 +1,29 @@
+# Page - Error 404
+err404:
+    title:        'Oops! An Error Occurred : Page '
+    headline:     The server returned a
+    description:  |
+                  The page you are looking for does not exist, or has been removed.
+                  Perhaps you can return back to the site’s homepage and see if you can find what you are looking for. 
+
+
+# Page - Error 403
+err403:
+    title:        Oops! An Error Occurred
+    headline:     The server returned a
+    description:  |
+                  Access to requested page was denied by Sadio DIALLO.
+                                
+                  For more information, please contact him.
+
+# Page - Error 
+base_error:
+    title:        Oops! An Error Occurred
+    headline:     The server returned a
+    description:  >
+                  Something is broken. Please let us know what you were doing when this error occurred.
+                  We will fix it as soon as possible. Sorry for any inconvenience caused.
+
+
+# All Pages - Button
+home_button:      Home

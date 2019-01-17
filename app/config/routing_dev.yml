@@ -6,12 +6,21 @@ _profiler:
     resource: '@WebProfilerBundle/Resources/config/routing/profiler.xml'
     prefix: /_profiler
 
+# Permet de prévisualiser les pages d'erreurs 404, etc.
+# exemple d'url : 
+#   localhost/projects/portfolio/web/app_dev.php/_error/404
+#   localhost/projects/portfolio/web/app_dev.php/_error/403
 _errors:
     resource: '@TwigBundle/Resources/config/routing/errors.xml'
     prefix: /_error
 
 _main:
     resource: routing.yml
+
+# Permet d'utiliser la console depuis le navigateur
+coresphere_console:
+    resource: .
+    type: extra
 
 # Route de test pour la traduction de langue
 #platform_translation:

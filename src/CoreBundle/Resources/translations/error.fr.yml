@@ -1,0 +1,30 @@
+# Page - Error 404
+err404:
+    title:        "Oups! Une erreur s'est produite : Page"
+    headline:     Le server a retourné le code
+    description:  |
+                  La page que vous recherchez n'existe pas ou a été retirée du site. 
+                  
+                  Nous sommes désolés pour le désagrément.
+
+# Page - Error 403
+err403:
+    title:        Oups! Une erreur s'est produite
+    headline:     Le server a retourné le code
+    description:  |
+                  L'accès à la page, que recherchez, a été bloqué par Sadio DIALLO. 
+
+                  Pour plus d'information, merci de le contacter.
+
+# Page - Error 
+base_error:
+    title:        Oups! Une erreur s'est produite
+    headline:     Le server a retourné le code
+    description:  |
+                  Le serveur a rencontré une erreur interne ou une mauvaise configuration et n’a pas été en mesure de compléter votre demande. Veuillez contacter Sadio DIALLO et l'informer de tout ce que vous avez pu faire qui a pu causer l’erreur. 
+
+                  Nous sommes désolés pour le désagrément.
+
+
+# All Pages - Button
+home_button:      Accueil

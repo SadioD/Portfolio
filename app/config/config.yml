@@ -32,6 +32,10 @@ framework:
     assets: ~
     php_errors:
         log: true
+    
+    # Add this line for FOSUserBundle and ASSETIC
+    templating:
+        engines: ['twig']
 
 # Twig Configuration
 twig:
@@ -64,6 +68,25 @@ doctrine:
         auto_generate_proxy_classes: '%kernel.debug%'
         naming_strategy: doctrine.orm.naming_strategy.underscore
         auto_mapping: true
+
+# Assetic
+assetic:
+    debug:          '%kernel.debug%'
+    use_controller: '%kernel.debug%'
+    # the path to the node executable
+    node: /usr/bin/nodejs
+    filters:
+        cssrewrite: ~
+        #uglifyjs2:
+            # the path to the uglifyjs executable
+            #bin: ../../app/Resources/nodes_modules/uglify-js/bin/uglifyjs
+        #uglifycss:
+            # the path to the uglifyccs executable
+            #bin: ../../app/Resources/nodes_modules/uglifycss
+        jsqueeze:   ~
+        scssphp:
+          formatter: 'Leafo\ScssPhp\Formatter\Compressed'
+
 
 # Swiftmailer Configuration
 swiftmailer:

@@ -23,19 +23,36 @@
         {# CSS #}
         {% block stylesheets %}
             {# flag Icons #}
-            <link type="text/css" rel="stylesheet" href="{{ asset('assets/vendor/flag_icons/css/flag-icon.min.css') }}" />
+            {#<link type="text/css" rel="stylesheet" href="{{ asset('assets/vendor/flag_icons/css/flag-icon.min.css') }}" />#}
             {# font awesome icons - fas/fab  #}
             <link type="text/css" rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-            <link type="text/css" rel="stylesheet" href="{{ asset('assets/vendor/css/animate.css') }}" />
+
+            {# CDN Bootstrap, si ca marche pas, on supprime #}
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+            
+            {#<link type="text/css" rel="stylesheet" href="{{ asset('assets/vendor/css/animate.css') }}" />
             <link type="text/css" rel="stylesheet" href="{{ asset('assets/vendor/css/fonts.css') }}" />
-            <link type="text/css" rel="stylesheet" href="{{ asset('assets/vendor/css/bootstrap.css') }}" />
+            <link type="text/css" rel="stylesheet" href="{{ asset('assets/vendor/css/bootstrap.css') }}" />#}
+            
             {# font awesome icons - fa #}
-            <link type="text/css" rel="stylesheet" href="{{ asset('assets/vendor/css/font-awesome.css') }}" />
+            {#<link type="text/css" rel="stylesheet" href="{{ asset('assets/vendor/css/font-awesome.css') }}" />
             <link type="text/css" rel="stylesheet" href="{{ asset('assets/vendor/css/magnific-popup.css') }}" />
             <link type="text/css" rel="stylesheet" href="{{ asset('assets/vendor/css/owl.carousel.min.css') }}" />
             <link type="text/css" rel="stylesheet" href="{{ asset('assets/vendor/css/owl.theme.default.min.css') }}" />
             <link type="text/css" rel="stylesheet" href="{{ asset('assets/vendor/css/style.css') }}" />
-            <link type="text/css" rel="stylesheet" href="{{ asset('assets/css/main.css') }}" />
+            <link type="text/css" rel="stylesheet" href="{{ asset('assets/css/main.css') }}" />#}
+
+            {% stylesheets 'assets/vendor/flag_icons/css/flag-icon.min.css'
+                           'assets/vendor/css/animate.css'
+                           'assets/vendor/css/fonts.css'
+                           'assets/vendor/css/font-awesome.css'
+                           'assets/vendor/css/magnific-popup.css'
+                           'assets/vendor/css/owl.carousel.min.css'
+                           'assets/vendor/css/owl.theme.default.min.css'
+                           'assets/vendor/css/style.css'
+                           'assets/css/*' filter='cssrewrite, ?scssphp' output='compiled/css/main.css' %}
+                <link rel="stylesheet" href="{{ asset_url }}" />
+            {% endstylesheets %}
         {% endblock %}
     </head>
     <body>
@@ -44,8 +61,9 @@
             <div class="row">
                 <div class="col-xs-12 text-center">
                     <span style="color:red;">
-                        Oups... Il semblerait que Javascript ne soit pas activé sur votre navigateur.
-                        Certaines fonnalités de ce site ne seront pas accessibles.
+                        {% trans %}
+                            Oups... Il semblerait que Javascript ne soit pas activé sur votre navigateur. Certaines fonnalités de ce site ne seront pas accessibles.
+                        {% endtrans %}
                     </span>
                 </div>
             </div>
@@ -78,17 +96,35 @@
         {% endblock %}
         
         {# Javascript #}
-        {% block javascripts %}
+        {% block javascripts %}           
+            {# CDN jQuery - Si ca ne marche pas, on le retire #}
+            <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+            {# CDN Bootstrap - Si ca ne marche pas, on le retire #}
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+            {#<script type="text/javascript" src="{{ asset('assets/vendor/js/jquery.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('assets/vendor/js/bootstrap.js') }}"></script>#}
             
-            <script type="text/javascript" src="{{ asset('assets/vendor/js/jquery.js') }}"></script>
-            <script type="text/javascript" src="{{ asset('assets/vendor/js/bootstrap.js') }}"></script>
-            <script type="text/javascript" src="{{ asset('assets/vendor/js/jquery.magnific-popup.min.js') }}"></script>
+            {#<script type="text/javascript" src="{{ asset('assets/vendor/js/jquery.magnific-popup.min.js') }}"></script>
             <script type="text/javascript" src="{{ asset('assets/vendor/js/owl.carousel.min.js') }}"></script>
             <script type="text/javascript" src="{{ asset('assets/vendor/js/plugin/countto/jquery.countTo.js') }}"></script>
             <script type="text/javascript" src="{{ asset('assets/vendor/js/plugin/countto/jquery.appear.js') }}"></script>
             <script type="text/javascript" src="{{ asset('assets/vendor/js/circles.js') }}"></script>
             <script type="text/javascript" src="{{ asset('assets/vendor/js/custom.js') }}"></script>
-            <script type="text/javascript" src="{{ asset('assets/js/main.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('assets/js/main.js') }}"></script>#}
+            
+            
+
+            {% javascripts 'assets/vendor/js/jquery.magnific-popup.min.js'
+                           'assets/vendor/js/owl.carousel.min.js'
+                           'assets/vendor/js/plugin/countto/jquery.countTo.js'
+                           'assets/vendor/js/plugin/countto/jquery.appear.js'
+                           'assets/vendor/js/circles.js'
+                           'assets/vendor/js/custom.js'
+                           'assets/js/main.js' filter='?jsqueeze' output='compiled/js/main.js' %}
+                <script src="{{ asset_url }}"></script>
+            {% endjavascripts %}
         {% endblock %}
     </body>
 </html>

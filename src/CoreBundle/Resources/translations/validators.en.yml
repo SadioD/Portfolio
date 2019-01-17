@@ -1,0 +1,8 @@
+# Erreurs affichées par PHP
+Your name must have at least {{ limit }} characters : Your name must have at least {{ limit }} characters
+Subject must have at least {{ limit }} characters: Subject must have at least {{ limit }} characters
+Your email is not a valid one: Your email is not a valid one
+Your message cannot be blank: Your message cannot be blank
+
+# Erreurs affichées par JS
+Email should be valid: Email should be valid

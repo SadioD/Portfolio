@@ -1,0 +1,27 @@
+{% extends "base.html.twig" %}
+{# Page Body ------------------------------------------------------------------------------------------------------------------ #}
+    {% block body %}
+        <div class="container">
+            <h1>{{ 'base_error.title'|trans({}, 'error') }} : {{ status_text }}</h1>
+            <hr>
+
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <p class="lead">
+                       {{ 'base_error.headline'|trans({}, 'error') }}  "{{ status_code }} {{ status_text }}".
+                    </p>
+                    <p>
+                       {{ 'base_error.description'|trans({}, 'error')|nl2br }} 
+                    </p>
+                </div>
+            </div>
+            <div class="row boxButton">
+                <div class="col-lg-12 col-md-12 col-xs-12 text-center">
+                    <a class="btn btn-primary btn-md backButton" href="{{ path('core_homepage') }}">
+                        {{ 'home_button'|trans({}, 'error') }}
+                    </a>
+                </div>
+            </div>
+        </div>
+    {% endblock body %}
+{# ---------------------------------------------------------------------------------------------------------------------------- #}

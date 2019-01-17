@@ -31,21 +31,21 @@ class Message
     /**
      * @var string
      * @ORM\Column(name="authorName", type="string", length=255)
-     * @Assert\Length(min=3, minMessage="Your name must have at least {{ limit }} characters.")
+     * @Assert\Length(min=3, minMessage="Your name must have at least {{ limit }} characters")
      */
     private $authorName;
 
     /**
      * @var string
      * @ORM\Column(name="authorEmail", type="string", length=255)
-     * @Assert\Email(message="Your email is not a valid one.")
+     * @Assert\Email(message="Your email is not a valid one")
      */
     private $authorEmail;
 
     /**
      * @var string
      * @ORM\Column(name="receiverEmail", type="string", length=255, nullable=true)
-     * @Assert\Email(message="Your email is not a valid one.")
+     * @Assert\Email(message="Your email is not a valid one")
      */
     private $receiverEmail;
 
@@ -58,7 +58,7 @@ class Message
     /**
      * @var string
      * @ORM\Column(name="subject", type="string", length=255)
-     * @Assert\Length(min=5, minMessage="Subject must have at least {{ limit }} characters.")
+     * @Assert\Length(min=5, minMessage="Subject must have at least {{ limit }} characters")
      */
     private $subject;
 
@@ -77,7 +77,7 @@ class Message
 
     /**
      * @var string
-     * @ORM\Column(name="status", type="text")     * 
+     * @ORM\Column(name="status", type="text")
      */
     private $status;
 

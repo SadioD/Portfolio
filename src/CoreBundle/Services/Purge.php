@@ -1,5 +1,5 @@
 <?php
-// Ce Service Purge les vieux messages lus qui datent de plus de 60 jours.
+// Ce Service Purge les vieux messages lus qui datent de plus de 90 jours.
 namespace CoreBundle\Services;
 
 use Doctrine\Common\Persistence\Event\LifecycleEventArgs;
@@ -26,7 +26,7 @@ class Purge
         {
             $todaysDate    = new \DateTime();
             $referenceDate = new \DateTime($message->getCreationDate()->format('Y-m-d H:i:s'));
-            $referenceDate->modify('+1 day');
+            $referenceDate->modify('+90 day');
             
             // Ensuite supprime les messages qui ont été lus et qui sont vieux de plus  de 60 jours 
             // Mais avant on leur envoie un email d'information

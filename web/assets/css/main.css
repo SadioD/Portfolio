@@ -47,6 +47,24 @@
     color: #c82663;
 }
 
+/* CoreBundle - Error 404 */
+.backButton {
+    background: rgb(246, 72, 59);
+    border-color: rgb(246, 72, 59);
+    border-radius: 0px 0px 0px 0px;
+}
+
+.boxButton {
+    margin-top: 4%;
+}
+
+.backButton:hover {
+    background: rgb(0, 0, 0);
+    border-color: rgb(246, 72, 59);
+    color: rgb(246, 72, 59);
+}
+
+
 /* AuthBundle - Page Login */
 .formContainer {
     background:rgb(27, 26, 26);

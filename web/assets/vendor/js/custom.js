@@ -217,7 +217,13 @@ Assigned to: ThemeForest
 				if($(this).val().trim() == ''){
 					check = 1;
 					$(this).focus();
-					targetResp.html('You missed out some fields.');
+                    
+                    // On affiche le message d'erreur en fonction de la locale
+                    if (targetResp.attr('id') == 'en') {
+                        targetResp.html('You missed out some fields');
+                    } else {
+                        targetResp.html('Vous devez remplir tous les champs');
+                    }
 					$(this).addClass('error');
 					return false;
 				}else{

@@ -1,0 +1,10 @@
+# Erreurs affichées par PHP
+Your name must have at least {{ limit }} characters : Votre nom doit contenir au moins {{ limit }} caractères
+Subject must have at least {{ limit }} characters: L'objet doit contenir au moins {{ limit }} caractères
+Your email is not a valid one: Votre email n'est pas valide
+Your message cannot be blank: Votre message ne peut pas être vide
+
+# Erreurs affichées par JS
+Email should be valid: Votre email n'est pas valide
+
+

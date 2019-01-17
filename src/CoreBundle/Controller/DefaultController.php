@@ -24,9 +24,13 @@ class DefaultController extends Controller
         if($request->isMethod('POST')) 
         {
             if ($form->handleRequest($request)->isValid()) {
-                return $this->saveForm($message);
+                return $this->saveForm($message, $request);
             } else {
-                $this->addFlash('redFlash', 'Oops... Your Message could not be sent. Please try again');
+                if ($request->getLocale() == 'en') {
+                    $this->addFlash('redFlash', 'Oops... Your Message could not be sent. Please try again');
+                } else {
+                    $this->addFlash('redFlash', 'Oups... Votre message n\'a pas été envoyé. Merci de réessayer');
+                }
             }
         }
         // On affiche la vue après avoir recupéré les entités 
@@ -40,11 +44,15 @@ class DefaultController extends Controller
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // Traite le formulaire de Contact -----------------------------------------------------------------------------
     // Save Form + Flash 
-    public function saveForm($message) {
+    public function saveForm($message, $request) {
         $this->getDoctrine()->getManager()->persist($message);
         $this->getDoctrine()->getManager()->flush();
         
-        $this->addFlash('greenFlash', 'Your Message has been delivered.');
+        if ($request->getLocale() == 'en') {
+            $this->addFlash('greenFlash', 'Your Message has been delivered.');
+        } else {
+            $this->addFlash('greenFlash', 'Votre message a bien été envoyé.');
+        }
         return $this->redirectToRoute('core_homepage');
     }// -----------------------------------------------------------------------------------------------------------------------------
 }
