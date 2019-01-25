@@ -2,14 +2,15 @@
 profile:
     title:      	About Me
     subtitle:   	Who am i
-    shortDesc:  	>           # Max 686 caractères
-                	There are many variations of passages of Lorem Ipsum available, but the majority have
-                	suffered alteration in some form, by injected humour, or randomised words which don't
-                	look even slightly believable. If you are going to use a passage of Lorem Ipsum, you
-                	need to be sure there isn't anything embarrassing hidden in the middle of text. All the
-                	Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary,
-                	making this the first true generator on the Internet. It uses a dictionary of over 200
-                  Latin words, combined with a handful of model sentence structures.
+    shortDesc:  	>        # Max 686 caractères                	
+                  I hold a Bachelor's degree in Business Administration, a Master's degree in Sales 
+                  Management and another one in Web Marketing.
+                  Thanks to my professional background, I have been able to develop key skills in the areas 
+                  of IT, Marketing and Project Management. Indeed, I’m good at designing and building websites, 
+                  eveloping cross platform mobile Apps. I am also capable of developing and implementing 
+                  effective marketing strategies both online (building SEO-friendly websites, growing visibility
+                  in organic search engine results by improving search engine rankings, Web Marketing) and 
+                  offline (business plan for startup projects or product launch plan, traditional Marketing).
     buttons:
         resume:   Download Resume
         hireMe:   Hire Me
@@ -29,10 +30,9 @@ hobbies:
     title:      	Hobbies
     subtitle:   	What I Like
     shortDesc:  	>             # Max 387 caractères
-                	There are many variations of passages of Lorem Ipsum available, but the majority have
-                	suffered alteration in some form, by injected humour, or randomised words which don't
-                	look even slightly believable. If you are going to use a passage of Lorem Ipsum, you
-                	need to be sure there isn't anything embarrassing hidden in the middle of text.
+                	I like video games, sport, new technologies and many other things. When I'm not busy with work,
+                  I like spending time with family and friends, discovering new places, going out dancing or 
+                  just reading.
     icons:
         plane:    Traveling
         gamepad:  Video Games

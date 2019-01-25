@@ -43,6 +43,13 @@ twig:
     strict_variables: '%kernel.debug%'
     form_themes: ['bootstrap_3_layout.html.twig']
 
+    # Variable Globales accessibles partout dans les vues
+    globals:
+        admin_address: '%admin_address%'
+        admin_name: '%admin_name%'        
+        admin_phone: '%admin_phone%'
+        mailer_user: '%mailer_user%'
+
 # Doctrine Configuration
 doctrine:
     dbal:

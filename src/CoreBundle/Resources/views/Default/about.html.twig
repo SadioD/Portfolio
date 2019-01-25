@@ -24,11 +24,11 @@
                                 profile.shortDesc
                             {% endtrans %}
                         </p>
-                        <a href="#" class="prt_btn" itemscope itemtype="http://schema.org/DownloadAction" itemprop="fromLocation">
-                            {{ 'profile.buttons.resume'|trans({}, 'about') }}
-                        </a> 
                         <a href="#" id="hireButton" class="prt_btn" itemscope itemtype="http://schema.org/WriteAction" itemprop="url">
                             {{ 'profile.buttons.hireMe'|trans({}, 'about') }}
+                        </a>
+                        <a href="#" class="prt_btn" itemscope itemtype="http://schema.org/DownloadAction" itemprop="fromLocation">
+                            {{ 'profile.buttons.resume'|trans({}, 'about') }}
                         </a>
                     </div>
                 </div>
@@ -51,9 +51,9 @@
                                         <h1>{{ education.graduationYear }}</h1>
                                     </div>
                                     <div class="prt_about_learnbox_info" itemscope itemtype="http://schema.org/Person">
-                                        <h4 itemprop="award">{{ education.degree }}</h4>
-                                        <span itemprop="homeLocation">{{ education.country }}</span>
-                                        <p itemprop="alumniOf">{{ education.shortDesc }}</p>
+                                        <h4 itemprop="award">{{ education.degree|trans }}</h4>
+                                        <span itemprop="homeLocation">{{ education.country|trans }}</span>
+                                        <p itemprop="alumniOf">{{ education.shortDesc|trans }}</p>
                                     </div>
                                 </div>
                             </div>
@@ -82,13 +82,13 @@
                                         </div>
                                         <div class="prt_about_experience_info" itemscope itemtype="http://schema.org/Corporation">
                                             <h4 itemprop="hasOccupation">
-                                                {{ experience.position }}
+                                                {{ experience.position|trans }}
                                             </h4>
                                             <span itemprop="worksFor">
                                                 {{ experience.company }}
                                             </span>
                                             <p itemprop="knowsAbout">
-                                                {{ experience.shortDesc }}
+                                                {{ experience.shortDesc|trans }}
                                             </p>
                                         </div>
                                     </div>

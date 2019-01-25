@@ -11,36 +11,37 @@ class LoadEducation extends Fixture
     public function load(ObjectManager $manager) 
     {
         // Lets create a list of Education
-        /*$list = [
-            [
+        $list = [
+         /*[
                 'graduationYear'  => '2004',
                 'country'         => 'Morocco',
                 'degree'          => 'Diploma In UI/UX Design',
                 'shortDesc'       => 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.',
                 'firstHtmlClass'  => 'col-lg-6 col-md-6 col-sm-12 col-xs-12 col-lg-offset-6 col-md-offset-6 col-sm-offset-0 col-xs-offset-0',
                 'secondHtmlClass' => 'prt_about_learnbox_right'
-            ],
+            ],*/
             [
-                'graduationYear'  => '2006',
-                'country'         => 'New York',
-                'degree'          => 'Diploma In Web Design',
-                'shortDesc'       => 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.',
+                'graduationYear'  => '2003',
+                'country'         => 'Morocco',
+                'degree'          => 'Bachelor of BA',
+                'shortDesc'       => 'Business Administration, Finance, Accounting, Management and Leadership, Business Strategy',
+                                      
                 'firstHtmlClass'  => 'col-lg-6 col-md-6 col-sm-12 col-xs-12',
                 'secondHtmlClass' => 'prt_about_learnbox_left'
             ],
             [
-                'graduationYear'  => '2008',
-                'country'         => 'Toronto',
-                'degree'          => 'Diploma In Web Marketing',
-                'shortDesc'       => 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.',
+                'graduationYear'  => '2010',
+                'country'         => 'Morocco',
+                'degree'          => 'Master of Sales Management',
+                'shortDesc'       => 'Strategic Marketing, Strategic Sales Management, Business Development Strategy, Customer Relationship Management',
                 'firstHtmlClass'  => 'col-lg-6 col-md-6 col-sm-12 col-xs-12 col-lg-offset-6 col-md-offset-6 col-sm-offset-0 col-xs-offset-0',
                 'secondHtmlClass' => 'prt_about_learnbox_right'
             ],
             [
-                'graduationYear'  => '2010',
-                'country'         => 'Paris',
-                'degree'          => 'Diploma In Trafic Manageme',
-                'shortDesc'       => 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.',
+                'graduationYear'  => '2012',
+                'country'         => 'France',
+                'degree'          => 'Master of Web Marketing',
+                'shortDesc'       => 'Digital Marketing, Graphic Design, Search Engine Optimization, Search Media Optimization, Search Engine Advertising',
                 'firstHtmlClass'  => 'col-lg-6 col-md-6 col-sm-12 col-xs-12'   ,
                 'secondHtmlClass' => 'prt_about_learnbox_left'
             ]
@@ -51,6 +52,6 @@ class LoadEducation extends Fixture
             $education = new Education($list[$i]);
             $manager->persist($education);
         }
-        $manager->flush();*/
+        $manager->flush();
     }
 }

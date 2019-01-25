@@ -40,7 +40,7 @@ class Education
 
     /**
      * @var string
-     * @ORM\Column(name="degree", type="string", length=26)
+     * @ORM\Column(name="degree", type="string", length=180)
      */
     private $degree;
 

@@ -1,4 +1,36 @@
 {% extends "base.html.twig" %}
+    {# Title Tag ------------------------------------------------------------------------------------------------- #}
+    {% block title %}
+        {% if app.request.locale == 'en' %}
+            Sadio DIALLO - Full Stack Web Developer, SEO & Web Marketing Specialist
+        {% else %}
+            Sadio DIALLO - Consultant Développement Web, Design Graphique, Référencement SEO, Marketing
+        {% endif %}
+    {% endblock title %}
+    {# ---------------------------------------------------------------------------------------------------------------------------- #}
+    {# Meta Description ------------------------------------------------------------------------------------------------- #}
+    {% block description %}
+        {% if app.request.locale == 'en' %}
+            Front-End & Back-End Web Developer/ Cross Platform Mobile App Developer/ SEO & Web Marketing Specialist/ 
+            Graphic Designer. Come check out my Portfolio
+        {% else %}
+            Développeur, Designer spécialisé dans la création de sites web et applications mobiles, le design 
+            graphique, le référencement web et le Marketing. Venez découvrir mon Portfolio
+        {% endif %}
+    {% endblock description %}
+    {# ---------------------------------------------------------------------------------------------------------------------------- #}
+    {# Meta Keywords ------------------------------------------------------------------------------------------------- #}
+    {% block keywords %}
+        {% if app.request.locale == 'en' %}
+            designer, web developer, programmer, full stack, webmaster, web marketing, freelance, template, front-end, 
+            back-end, SEO, job, web, Marketing, website, portfolio
+        {% else %}
+            full stack, programmeur, designer, portfolio, cv, développeur, codeur, référencement web, emploi, recrutement, consultant, 
+            SEO, web marketing, front-end, back-end, freelance, cadre, site web, développement, design graphique, intégrateur, création de site w
+        {% endif %}
+    {% endblock keywords %}
+    {# ---------------------------------------------------------------------------------------------------------------------------- #} 
+    {# Page Body ------------------------------------------------------------------------------------------------- #}
     {% block body %}
         {# Menu + Contenu des pages  #}
         <div class="prt_main_wrapper">            
@@ -53,3 +85,4 @@
             {% include "@Core/Default/portfolio.html.twig" %}
         </div>
     {% endblock %}
+    {# ---------------------------------------------------------------------------------------------------------------------------- #} 

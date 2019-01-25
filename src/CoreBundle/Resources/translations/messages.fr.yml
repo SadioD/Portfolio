@@ -1,17 +1,17 @@
-# Menu Principal
+################################################# Menu Principal #################################################
 nav:
     about:      Profil
     portfolio:  Portfolio
     contact:    Contact
     strength:   Compétences
     
-# Contact Form
+################################################# Contact Form #################################################
 Your Name: Votre Nom 
 Your Email: Votre Email
 Subject: Objet
 Message: Message
 
-# BDD - Strength
+################################################# BDD - Strength #################################################
 Web Development: Développement Web
 website building and maintenance: développement et maintenance de sites web
 SEO Specialist: Référencement Web
@@ -21,5 +21,25 @@ cross-patform mobile app development: développement d'application mobile
 Web Marketing: Web Marketing
 online promotion, traffic management: marketing digital, amélioration du trafic
 
-# Alerte Désactivation Javascript 
+################################################# BDD - About #################################################
+# Experience
+Développeur/Designer: Développeur/Designer
+Développement d'applications web et mobile. Gestion de base de données. Création graphique (flyers, logos, cartes de visite...): Développement d'applications web et mobile. Gestion de base de données. Création graphique (flyers, , logos, cartes de visite...)
+Responsable SEO: Responsable SEO
+Amélioration du positionnement dans les moteurs de recherche. Optimisation de site web. Optimisation du Netlinking: Amélioration du positionnement dans les moteurs de recherche. Optimisation de site web. Optimisation du Netlinking
+Responsable Clientèle: Responsable Clientèle
+Supervision de centres d'appels. Définition et suivi des objectifs. Formation et évaluation de collaborateurs: Supervision de centres d'appels. Définition et suivi des objectifs. Formation et évaluation de collaborateurs
+Chargé d'études MKTG: Chargé d'études MKTG
+Supervision d'enquêtes de satisfaction pour le compte du Syndicat des Transports en Ile de France: Supervision d'enquêtes de satisfaction pour le compte du Syndicat des Transports en Ile de France
+# Education
+Morocco: Maroc
+Bachelor of BA: Licence en Gestion d'entreprise
+Business Administration, Finance, Accounting, Management and Leadership, Business Strategy: Gestion de Risques, Management & Leadership, Stratégie d'entreprise, Finances & Comptabilité
+Master of Sales Management: Master en Ingénierie Commerciale
+Strategic Marketing, Strategic Sales Management, Business Development Strategy, Customer Relationship Management: Marketing Stratégique, Produits & Services, Management des Ventes, Organisation des réseaux commerciaux
+France: France
+Master of Web Marketing: Master en Web Marketing
+Digital Marketing, Graphic Design, Search Engine Optimization, Search Media Optimization, Search Engine Advertising: Digital Marketing, Design Graphique, Référencement naturel, Référencement payant, Technologies du Web
+
+################################################# Alerte Désactivation Javascript #################################################
 "Oups... Il semblerait que Javascript ne soit pas activé sur votre navigateur. Certaines fonnalités de ce site ne seront pas accessibles.": "Oups... Il semblerait que Javascript ne soit pas activé sur votre navigateur. Certaines fonnalités de ce site ne seront pas accessibles."

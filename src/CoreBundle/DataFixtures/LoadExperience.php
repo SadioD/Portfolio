@@ -14,35 +14,35 @@ class LoadExperience extends Fixture
         /*$list = [
             [
                 'startingYear'  => '2012',
-                'startingMonth' => 'July',
-                'endingDate'    => '2013 Sep',
-                'position'      => 'Junior Ui/Ux Designer',
-                'company'       => 'Amazon',
-                'shortDesc'     => 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.'
+                'startingMonth' => 'Dec',
+                'endingDate'    => '2013 Dec',
+                'position'      => 'Chargé d\'études MKTG',
+                'company'       => 'MV2 Group',
+                'shortDesc'     => 'Supervision d\'enquêtes de satisfaction pour le compte du Syndicat des Transports en Ile de France'
             ],
             [
-                'startingYear'  => '2013',
-                'startingMonth' => 'Oct',
-                'endingDate'    => '2014 Dec',
-                'position'      => 'Senior Ui/Ux Designer',
-                'company'       => 'Adobe',
-                'shortDesc'     => 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.'
-            ],
-            [
-                'startingYear'  => '2015',
-                'startingMonth' => 'Jun',
-                'endingDate'    => '2015 March',
-                'position'      => 'Senior Ui/Ux Designer',
+                'startingYear'  => '2014',
+                'startingMonth' => 'March',
+                'endingDate'    => '2016 Oct',
+                'position'      => 'Responsable Clientèle',
                 'company'       => 'Acticall Group',
-                'shortDesc'     => 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.'
+                'shortDesc'     => 'Supervision de centres d\'appels. Définition et suivi des objectifs. Formation et évaluation de collaborateurs'
             ],
             [
-                'startingYear'  => '2016',
+                'startingYear'  => '2017',
+                'startingMonth' => 'Feb',
+                'endingDate'    => '2019 Jan',
+                'position'      => 'Responsable SEO',
+                'company'       => 'Free Field MKTG',
+                'shortDesc'     => 'Amélioration du positionnement dans les moteurs de recherche. Optimisation de site web. Optimisation du Netlinking'
+            ],
+            [
+                'startingYear'  => '2017',
                 'startingMonth' => 'April',
                 'endingDate'    => 'Present',
-                'position'      => 'Lead Ui/Ux Designer',
-                'company'       => 'Google',
-                'shortDesc'     => 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.'
+                'position'      => 'Développeur/Designer',
+                'company'       => 'Freelance',
+                'shortDesc'     => 'Développement d\'applications web et mobile. Gestion de base de données. Création graphique (flyers, logos...)'
             ]
         ];
         

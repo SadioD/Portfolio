@@ -36,22 +36,20 @@
             <div class="prt_contact_details" itemscope itemtype="http://schema.org/Person">
                 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                     <div class="prt_contact_details_box details_box1" itemprop="telephone">
-                        <h4>{{ 'contact.phone.title'|trans({}, 'contact') }}</h4>
-                        <p>{{ 'contact.phone.value'|trans({}, 'contact') }}</p>
+                        <h4>{{ 'contact.phone.label'|trans({}, 'contact') }}</h4>
+                        <p>{{ admin_phone }}</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                     <div class="prt_contact_details_box details_box2" itemprop="email">
-                        <h4>{{ 'contact.email.title'|trans({}, 'contact') }}</h4>
-                        <p>
-                            {{ 'contact.email.value'|trans({}, 'contact') }}
-                        </p>
+                        <h4>{{ 'contact.email.label'|trans({}, 'contact') }}</h4>
+                        <p>{{ mailer_user }}</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                     <div class="prt_contact_details_box details_box3" itemprop="address">
-                        <h4>{{ 'contact.address.title'|trans({}, 'contact') }}</h4>
-                        <p>{{ 'contact.address.value'|trans({}, 'contact') }}</p>
+                        <h4>{{ 'contact.address.label'|trans({}, 'contact') }}</h4>
+                        <p>{{ admin_address }}</p>
                     </div>
                 </div>
             </div>

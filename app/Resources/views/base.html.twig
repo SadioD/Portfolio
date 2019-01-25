@@ -6,42 +6,24 @@
 <!--<![endif]-->
     <head>
         {# Title #}
-        <title>
-            {% block title %}
-                {#Sadio DIALLO - Consultant en Développement Web, Design, Référencement SEO, WebMarketing#}
-                Sadio DIALLO - Full Stack Web Developer, SEO & Web Marketing Specialist
-            {% endblock %}
-        </title>
-
+        <title>{% block title %}{% endblock %}</title>
         {# Meta data #}
         <meta charset="UTF-8" />
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta name="description" content="Get to know me, checkout the projects I'm working on and more...">
-        <meta name="keywords" content="Design, portfolio, cv, web developer, webmaster, web marketing, développeur, freelance, codeur, template, referencement SEO, lettre de motivation, emploi, recrutement, job, cadre, web, consultant, Marketing">
+        <meta name="description" content="{% block description %}{% endblock %}">
+        <meta name="keywords" content="{% block keywords %}{% endblock %}">
         <meta name="MobileOptimized" content="320">
         
         {# CSS #}
         {% block stylesheets %}
-            {# flag Icons #}
-            {#<link type="text/css" rel="stylesheet" href="{{ asset('assets/vendor/flag_icons/css/flag-icon.min.css') }}" />#}
-            {# font awesome icons - fas/fab  #}
+            {# font awesome icons - fas/fab. PS: The fa icons will be loaded below in stylesheets block   #}
             <link type="text/css" rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
             {# CDN Bootstrap, si ca marche pas, on supprime #}
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">  
+            {#<link type="text/css" rel="stylesheet" href="{{ asset('assets/vendor/css/bootstrap.css') }}" />#}
             
-            {#<link type="text/css" rel="stylesheet" href="{{ asset('assets/vendor/css/animate.css') }}" />
-            <link type="text/css" rel="stylesheet" href="{{ asset('assets/vendor/css/fonts.css') }}" />
-            <link type="text/css" rel="stylesheet" href="{{ asset('assets/vendor/css/bootstrap.css') }}" />#}
-            
-            {# font awesome icons - fa #}
-            {#<link type="text/css" rel="stylesheet" href="{{ asset('assets/vendor/css/font-awesome.css') }}" />
-            <link type="text/css" rel="stylesheet" href="{{ asset('assets/vendor/css/magnific-popup.css') }}" />
-            <link type="text/css" rel="stylesheet" href="{{ asset('assets/vendor/css/owl.carousel.min.css') }}" />
-            <link type="text/css" rel="stylesheet" href="{{ asset('assets/vendor/css/owl.theme.default.min.css') }}" />
-            <link type="text/css" rel="stylesheet" href="{{ asset('assets/vendor/css/style.css') }}" />
-            <link type="text/css" rel="stylesheet" href="{{ asset('assets/css/main.css') }}" />#}
-
+            {# Fichiers figurant dans web/assets/ #}
             {% stylesheets 'assets/vendor/flag_icons/css/flag-icon.min.css'
                            'assets/vendor/css/animate.css'
                            'assets/vendor/css/fonts.css'
@@ -99,23 +81,13 @@
         {% block javascripts %}           
             {# CDN jQuery - Si ca ne marche pas, on le retire #}
             <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+            {#<script type="text/javascript" src="{{ asset('assets/vendor/js/jquery.js') }}"></script>
 
             {# CDN Bootstrap - Si ca ne marche pas, on le retire #}
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-            {#<script type="text/javascript" src="{{ asset('assets/vendor/js/jquery.js') }}"></script>
-            <script type="text/javascript" src="{{ asset('assets/vendor/js/bootstrap.js') }}"></script>#}
             
-            {#<script type="text/javascript" src="{{ asset('assets/vendor/js/jquery.magnific-popup.min.js') }}"></script>
-            <script type="text/javascript" src="{{ asset('assets/vendor/js/owl.carousel.min.js') }}"></script>
-            <script type="text/javascript" src="{{ asset('assets/vendor/js/plugin/countto/jquery.countTo.js') }}"></script>
-            <script type="text/javascript" src="{{ asset('assets/vendor/js/plugin/countto/jquery.appear.js') }}"></script>
-            <script type="text/javascript" src="{{ asset('assets/vendor/js/circles.js') }}"></script>
-            <script type="text/javascript" src="{{ asset('assets/vendor/js/custom.js') }}"></script>
-            <script type="text/javascript" src="{{ asset('assets/js/main.js') }}"></script>#}
-            
-            
-
+            {#<script type="text/javascript" src="{{ asset('assets/vendor/js/bootstrap.js') }}"></script>#}
             {% javascripts 'assets/vendor/js/jquery.magnific-popup.min.js'
                            'assets/vendor/js/owl.carousel.min.js'
                            'assets/vendor/js/plugin/countto/jquery.countTo.js'

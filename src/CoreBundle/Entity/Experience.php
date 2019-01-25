@@ -47,19 +47,19 @@ class Experience
     /**
      * @var string
      *
-     * @ORM\Column(name="position", type="string", length=21)
+     * @ORM\Column(name="position", type="string", length=180)
      */
     private $position;
 
     /**
      * @var string
-     * @ORM\Column(name="company", type="string", length=16)
+     * @ORM\Column(name="company", type="string", length=180)
      */
     private $company;
 
     /**
      * @var string
-     * @ORM\Column(name="shortDesc", type="string", length=116, nullable=true)
+     * @ORM\Column(name="shortDesc", type="string", length=180, nullable=true)
      */
     private $shortDesc;
 

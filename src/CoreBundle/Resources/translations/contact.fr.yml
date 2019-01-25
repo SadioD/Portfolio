@@ -8,11 +8,8 @@ form:
 # Partie - Coordonnées
 contact:
     phone:
-        title:        Téléphone
-        value:        +337-58-17-61-11
+        label:        Téléphone
     email:
-        title:        Email
-        value:        contact.sadio.diallo@gmail.com
+        label:        Email
     address:
-        title:        Adresse
-        value:        16 Rue de la Liberté, Saint-Etienne
+        label:        Adresse

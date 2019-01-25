@@ -1,17 +1,17 @@
-# Menu Principal
+################################################# Menu Principal #################################################
 nav:
     about:      about
     portfolio:  portfolio
     contact:    contact
     strength:   strength
 
-# Contact Form
+################################################# Contact Form #################################################
 Your Name: Your Name 
 Your Email: Your Email
 Subject: Subject
 Message: Message
 
-# BDD - Strength
+################################################# BDD - Strength #################################################
 Web Development: Web Development
 website building and maintenance: website building and maintenance
 SEO Specialist: SEO Specialist
@@ -21,5 +21,25 @@ cross-patform mobile app development: cross-patform mobile app development
 Web Marketing: Web Marketing
 online promotion, traffic management: online promotion, traffic management
 
-# Alerte Désactivation Javascript 
+################################################# BDD - About #################################################
+# Experience
+Développeur/Designer: Programmer/Designer
+Développement d'applications web et mobile. Gestion de base de données. Création graphique (flyers, logos, cartes de visite...): Websites and mobile Apps development and maintenance. Graphic Design (flyers, logos, business cards...)
+Responsable SEO: SEO Specialist
+Amélioration du positionnement dans les moteurs de recherche. Optimisation de site web. Optimisation du Netlinking: Website analysis and optimization. Backlinks optimization. Maximization of local search exposure
+Responsable Clientèle: Customer Care Supervisor
+Supervision de centres d'appels. Définition et suivi des objectifs. Formation et évaluation de collaborateurs: Overseeing and monitoring customer service daily activities. Staff training and assessment
+Chargé d'études MKTG: Market Researcher
+Supervision d'enquêtes de satisfaction pour le compte du Syndicat des Transports en Ile de France: Writing and managing the distribution of surveys. briefing interviewers. Compiling and analyzing statistical data
+# Education
+Morocco: Morocco
+Bachelor of BA: Bachelor of BA
+Business Administration, Finance, Accounting, Management and Leadership, Business Strategy: Business Administration, Finance, Accounting, Management and Leadership, Business Strategy
+Master of Sales Management: Master of Sales Management
+Strategic Marketing, Strategic Sales Management, Business Development Strategy, Customer Relationship Management: Strategic Marketing, Strategic Sales Management, Business Development Strategy, Customer Relationship Management
+France: France
+Master of Web Marketing: Master of Web Marketing
+Digital Marketing, Graphic Design, Search Engine Optimization, Search Media Optimization, Search Engine Advertising: Digital Marketing, Graphic Design, Search Engine Optimization, Search Media Optimization, Search Engine Advertising
+
+################################################# Alerte Désactivation Javascript #################################################
 "Oups... Il semblerait que Javascript ne soit pas activé sur votre navigateur. Certaines fonnalités de ce site ne seront pas accessibles.": "Oops... It looks like Javascript is not enabled in your browser. To access full website content, please enable Javascript."
