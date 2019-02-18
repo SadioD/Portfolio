@@ -271,7 +271,7 @@ input:focus, textarea:focus, select:focus, button:focus {
 	color: #ffffff;
 	font-weight:bold;
     /*background: url(http://placehold.it/650X800) no-repeat;*/
-    background: rgba(204, 204, 204, 1);
+    background: rgb(167, 167, 167);
     /*background: rgb(231, 125, 125);*/
     /*background-image:url(../../images/menu_responsive.png);*/
 	-webkit-background-clip: text;
