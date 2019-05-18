@@ -25,7 +25,7 @@ class MainController extends Controller
                                                                  'last_username' => $authUtils->getLastUsername()]);
     }// -------------------------------------------------------------------------------------------------------------------------
     /**
-     * Seuls les Admin auront accès
+     * Seuls les Admin auront accès - affiche la liste des messages reçus
      * @Security("has_role('ROLE_ADMIN')") --------------------------------------------------------------------------------------
      */
     public function profileAction() 
@@ -33,7 +33,7 @@ class MainController extends Controller
         return $this->render('@SadioAuth/Main/profile.html.twig', ['messages' => $this->getDoctrine()->getRepository(Message::class)->findBy([], ['id' => 'DESC'])]);
     }// -------------------------------------------------------------------------------------------------------------------------
     /**
-     * Seuls les Admin auront accès
+     * Seuls les Admin auront accès - affiche la liste des messages envoyés
      * @Security("has_role('ROLE_ADMIN')") --------------------------------------------------------------------------------------
      */
     public function outboxAction() 
@@ -43,7 +43,7 @@ class MainController extends Controller
         return $this->render('@SadioAuth/Main/outbox.html.twig', ['messages' => $messageList]);
     }// -------------------------------------------------------------------------------------------------------------------------
     /**
-     * Seuls les Admin auront accès
+     * Seuls les Admin auront accès - affiche le single message
      * @Security("has_role('ROLE_ADMIN')") --------------------------------------------------------------------------------------
      */
     public function viewAction($id) 
