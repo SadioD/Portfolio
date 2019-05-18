@@ -53,20 +53,20 @@ Assigned to: ThemeForest
 	$('.prt_skills_wrapper').appear(function() {
 		var circle1 = Circles.create({
 			id: 'circles-1',
-			value: 70,
+			value: 85,
 			radius: 100,
 			number: 90,
-			text: '70%',
+			text: '85%',
 			width: 8,
 			colors: ["#202020", "#00c8ff"],
 			duration: 900
 		});
 		var circle2 = Circles.create({
 			id: 'circles-2',
-			value: 65,
+			value: 75,
 			radius: 100,
 			number: 80,
-			text: '65%',
+			text: '75%',
 			width: 8,
 			colors: ["#202020", "#ff8511"],
 			duration: 900

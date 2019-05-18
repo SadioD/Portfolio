@@ -16,7 +16,7 @@
 #languageBox {
     /*background: red;*/
     position: relative;
-    top: -120%;
+    top: -40%;
     right: -90%;
     width: 60px;
 }
@@ -121,7 +121,7 @@
     #languageBox {
         /*background: yellow;*/
         position: relative;
-        top: -92%; /*-140%*/
+        top: -67%; /*-140%*/
         width: 60px;
         right: -80%; /*-80%*/
     }

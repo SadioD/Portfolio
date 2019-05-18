@@ -31,7 +31,7 @@ class LoadExperience extends Fixture
             [
                 'startingYear'  => '2017',
                 'startingMonth' => 'Feb',
-                'endingDate'    => '2019 Jan',
+                'endingDate'    => '2019 Jul',
                 'position'      => 'Responsable SEO',
                 'company'       => 'Free Field MKTG',
                 'shortDesc'     => 'Amélioration du positionnement dans les moteurs de recherche. Optimisation de site web. Optimisation du Netlinking'
