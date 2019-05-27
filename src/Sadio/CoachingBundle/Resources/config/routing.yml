@@ -1,0 +1,3 @@
+sadio_coaching_homepage:
+    path:     /coach-de-vie
+    defaults: { _controller: SadioCoachingBundle:Coaching:index }

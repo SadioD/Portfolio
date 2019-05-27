@@ -1,3 +1,8 @@
+# Routes du CoachingBundle
+sadio_coaching:
+    resource: "@SadioCoachingBundle/Resources/config/routing.yml"
+    prefix:   /services/
+
 # Routes du AuthBundle
 sadio_auth:
     resource: "@SadioAuthBundle/Resources/config/routing.yml"
