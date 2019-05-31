@@ -450,3 +450,11 @@ hr {
     border-color: #F6483B;
     color: #F6483B;
 }
+
+.textBlock {
+    margin-top: 40px;
+}
+
+.rowBlock {
+    margin-top: 90px;
+}
